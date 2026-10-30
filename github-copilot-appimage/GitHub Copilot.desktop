@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=
+Comment=Tauri Copilot Application
+Exec=/opt/appimages/github-copilot.AppImage %u
+Icon=github
+MimeType=x-scheme-handler/github-app;x-scheme-handler/ghapp;x-scheme-handler/gh
+Name=GitHub Copilot
+Terminal=false
+Type=Application
+StartupWMClass=github

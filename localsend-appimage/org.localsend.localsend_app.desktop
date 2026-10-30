@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name[en_US]=LocalSend
+Comment[en_US]=An open source cross-platform alternative to AirDrop
+Keywords=Share files device to device
+Type=Application
+Exec=/opt/appimages/LocalSend.AppImage %U
+Icon=localsend
+StartupWMClass=localsend_app
+Terminal=false
+Categories=Utility;
+

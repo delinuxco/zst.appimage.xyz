@@ -1,0 +1,106 @@
+#  Maintainer: John Machado <john at delinuxco dot com>
+
+###############################################################################
+# CONFIGURATION SECTION
+# Replace these values with your specific application details.
+###############################################################################
+pkgname=onlyoffice-desktopeditors-appimage
+_pkgname=DesktopEditors
+pkgver="10.0.0"
+pkgrel=1
+pkgdesc="Open SOurce office suite that combines documents, spreadsheet, presentation and more."
+arch=('x86_64')
+url="https://www.onlyoffice.com/"
+license=('GNU AGPL v3') # Replace with actual license
+provides=('onlyoffice')
+conflicts=('onlyoffice' 'onlyoffice-bin')
+
+# The filename as it appears in the download URL (e.g., app-1.0.0-x86_64.AppImage)
+_appimage_filename="${_pkgname}-x86_64.AppImage"
+
+# The source URL to download AppImage
+_source_url="https://github.com/ONLYOFFICE/appimage-desktopeditors/releases/download/${pkgver}/${_pkgname}-x86_64.AppImage"
+#            https://github.com/ONLYOFFICE/appimage-desktopeditors/releases/download/v10.0.0/DesktopEditors-x86_64.AppImage
+
+# Where the file will live in your system (Standard is /opt/appimages/)
+_install_dir="/opt/appimages"
+_install_path="${_install_dir}/${_pkgname}.AppImage"
+
+# Inside the AppImage, what is the name of the .desktop file?
+# Usually it matches the app name, e.g., 'org.kde.kcalc.desktop'
+_desktop_file="onlyoffice-desktopeditors.desktop"
+
+# Inside the AppImage, what is the name of the icon file?
+_icon_file="onlyoffice-desktopeditors.svg"
+###############################################################################
+
+depends=(
+    'fuse2'
+    'fuse3'
+)
+
+makedepends=(
+    'desktop-file-utils'
+)
+
+# Add any optional dependencies
+optdepends=()
+
+options=(!strip)
+
+# All source files in root directory of PKGBUILD must be listed and with corresponding sha256/md5 sums
+source=(
+    "${_source_url}"
+    "${_icon_file}"
+)
+
+sha256sums=(
+    '3e4668d44f6881d1d8873b38ea9c9fd81b9c77132facdb735bfebfe960edb745'
+    '1ca39d55cd4f1a946ac2e974a50efd9ae2d86d7c74f649788119881d7201baeb'
+)
+
+prepare() {
+
+  # 1. Make the AppImage executable and extract it
+  chmod +x "${_appimage_filename}"
+  ./"${_appimage_filename}" --appimage-extract
+
+  # 2. Setup directory structure inside squashfs-root for the build process
+  mkdir -p "${srcdir}/squashfs-root/assets/icons/"
+  mkdir -p "${srcdir}/squashfs-root/assets/launchers/"
+
+  # 3. Move the icon and desktop file to a known location for easy installation
+  # Note: We check if they exist to prevent build failure if names differ
+  if [ -f "${_icon_file}" ]; then
+    cp "${_icon_file}" "squashfs-root/assets/icons/${_icon_file}"
+  fi
+
+  if [ -f "squashfs-root/${_desktop_file}" ]; then
+    cp "squashfs-root/${_desktop_file}" "squashfs-root/assets/launchers/${_desktop_file}"
+
+  # 4. CRITICAL: Rewrite the .desktop file to point to new path
+  #    This rewrites the 'Exec' line so it will execute the AppImage from /opt/appimages/
+  #    If the .desktop and svg files will be provided in the PKGBUILD directory, comment out the next two lines that start with "desktop-file-edit".
+    desktop-file-edit --set-key=Exec --set-value="${_install_path} %U" "squashfs-root/assets/launchers/${_desktop_file}"
+    desktop-file-edit --set-key=TryExec --set-value="${_install_path}" "squashfs-root/assets/launchers/${_desktop_file}"
+  fi
+}
+
+package() {
+  # 1. Install the actual AppImage to /opt/appimages/
+  install -d "${pkgdir}${_install_dir}"
+  install -Dm755 "${srcdir}/${_appimage_filename}" "${pkgdir}${_install_path}"
+
+  # 2. Install the Desktop Entry and Icon to standard system paths
+  if [ -f "${srcdir}/squashfs-root/assets/launchers/${_desktop_file}" ]; then
+    install -Dm644 "squashfs-root/assets/launchers/${_desktop_file}" "${pkgdir}/usr/share/applications/${_desktop_file}"
+  fi
+
+  if [ -f "${srcdir}/squashfs-root/assets/icons/${_icon_file}" ]; then
+    install -Dm644 "squashfs-root/assets/icons/${_icon_file}" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/${_icon_file}"
+  fi
+
+  # 3. Create the symlink in /usr/bin so you can launch it from terminal via 'appname'
+  install -d "${pkgdir}/usr/bin"
+  ln -s "${_install_path}" "${pkgdir}/usr/bin/${_pkgname}"
+}

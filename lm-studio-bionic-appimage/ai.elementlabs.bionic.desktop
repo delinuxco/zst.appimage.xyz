@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Bionic
+Exec=/opt/appimages/lm-studio-bionic.AppImage %U
+Terminal=false
+Type=Application
+Icon=bionic
+StartupWMClass=ai.elementlabs.bionic
+X-AppImage-Version=1.1.2+11
+Comment=Discover, download, and run LLMs locally
+Keywords=developer;llm;
+X-category=Development;Utility;
+MimeType=x-scheme-handler/bionic;
+Categories=Development;
+X-Desktop-File-Install-Version=0.28

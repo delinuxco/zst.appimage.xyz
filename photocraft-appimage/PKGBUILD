@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=photocraft-appimage
 _pkgname=photocraft
-pkgver="0.5.0"
+pkgver="0.17.0"
 pkgrel=1
 pkgdesc="Image editing; an open-source, clean-room reimplementation of Adobe Photoshop, rebuilt in pure Rust"
 arch=('x86_64')
@@ -20,7 +20,7 @@ _appimage_filename="${_pkgname}-${pkgver}-linux-x86_64.AppImage"
 
 # The source URL to download AppImage
 _source_url="https://github.com/storytold/${_pkgname}/releases/download/v${pkgver}/${_pkgname}-${pkgver}-linux-x86_64.AppImage"
-#            https://github.com/storytold/photocraft/releases/download/v0.9.0/photocraft-0.9.0-linux-x86_64.AppImage
+#            https://github.com/storytold/photocraft/releases/download/v0.5.0/photocraft-0.5.0-linux-x86_64.AppImage
 
 # Where the file will live in your system (Standard is /opt/appimages/)
 _install_dir="/opt/appimages"
@@ -53,8 +53,10 @@ source=(
     "${_source_url}"
     "${_icon_file}"
 )
-sha256sums=('f54d863807053bbdfcffa0d624ef7e49d3fd41310c7bb1ede48536f69929d22f'
-            '4a433d796f45167f128241f025c1bb0f90fc096324651f6c765a7233a567fff4')
+sha256sums=(
+    'ce77299f243534ac1d248aa81c9a9fd278ae407c024cb931e03931eb70be54af'
+    '4a433d796f45167f128241f025c1bb0f90fc096324651f6c765a7233a567fff4'
+)
 
 prepare() {
 

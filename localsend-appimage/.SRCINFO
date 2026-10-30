@@ -1,0 +1,13 @@
+pkgbase = localsend-appimage
+	pkgdesc = Template app description.
+	pkgver = 1.17.0
+	pkgrel = 1
+	arch = x86_64
+	license = MIT
+	provides = localsend
+	conflicts = localsend-desktop
+	options = !strip
+	source_x86_64 = https://github.com/localsend/localsend/releases/download/v1.17.0/LocalSend-1.17.0-linux-x86-64.AppImage
+	sha256sums_x86_64 = c1a1e7bc7bb7eebdf6c365a30cef0d4ba3e6bb79961c3b94edf918920f8e36f0
+
+pkgname = localsend-appimage

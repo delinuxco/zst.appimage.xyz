@@ -1,0 +1,113 @@
+#  Maintainer: John Machado <john at delinuxco dot com>
+
+###############################################################################
+# CONFIGURATION SECTION
+# Replace these values with your specific application details.
+###############################################################################
+pkgname=lm-studio-appimage
+_pkgname=lm-studio
+pkgver="0.4.26"
+_pkgver="0.4.26-4"
+pkgrel=1
+pkgdesc="Experiment with LLMs on your computer. Chat interface and programmable API."
+arch=('x86_64')
+url="https://lmstudio.ai/"
+license=('MIT') # Replace with actual license
+provides=('lm-studio')
+conflicts=(
+    'lm-studio'
+    'lmstudio-bin'
+    'lm-studio-bin'
+)
+
+# The filename as it appears in the download URL (e.g., app-1.0.0-x86_64.AppImage)
+_appimage_filename="LM-Studio-${_pkgver}-x64.AppImage"
+
+# The source URL to download AppImage
+_source_url="https://installers.lmstudio.ai/linux/x64/${_pkgver}/LM-Studio-${_pkgver}-x64.AppImage"
+#            https://installers.lmstudio.ai/linux/x64/0.4.26-4/LM-Studio-0.4.26-4-x64.AppImage
+
+
+# Where the file will live in your system (Standard is /opt/appimages/)
+_install_dir="/opt/appimages"
+_install_path="${_install_dir}/${_pkgname}.AppImage"
+
+# Inside the AppImage, what is the name of the .desktop file?
+# Usually it matches the app name, e.g., 'org.kde.kcalc.desktop'
+_desktop_file="ai.elementlabs.lmstudio.desktop"
+
+# Inside the AppImage, what is the name of the icon file?
+_icon_file="lm-studio.svg"
+###############################################################################
+
+depends=(
+    'fuse2'
+    'fuse3'
+)
+
+makedepends=(
+    'desktop-file-utils'
+)
+
+# Add any optional dependencies
+optdepends=()
+
+options=(!strip)
+
+# All source files in root directory of PKGBUILD must be listed and with corresponding sha256/md5 sums
+source=(
+    "${_source_url}"
+    "${_icon_file}"
+    "${_desktop_file}"
+)
+sha512sums=(
+    'c19fabf1ac6241d87c84027d3d3ca701d888de4294272eb19311575582bd31c18512c518115bb4ebeb4a1b7a89a8c6264140cfdc8e38276516d5a75c8563e55b'
+    '46fcaef72b8d340c047b45e6c28e3a5691082317eb84c815337881ea30fe2f45aae8887df7c146e919682925d9198bb946aeea6cff8f66f9072db4ab18c46188'
+    'a36d20906d3cdfe91c360755333d923c214f594761ebe0c7e5359826a96fb99131ffd5256464565cd810142d93caae634abb119dec6de8214e8feafd6d861659'
+)
+
+prepare() {
+
+  # 1. Make the AppImage executable and extract it
+  chmod +x "${_appimage_filename}"
+  ./"${_appimage_filename}" --appimage-extract
+
+  # 2. Setup directory structure inside squashfs-root for the build process
+  mkdir -p "${srcdir}/squashfs-root/assets/icons/"
+  mkdir -p "${srcdir}/squashfs-root/assets/launchers/"
+
+  # 3. Move the icon and desktop file to a known location for easy installation
+  # Note: We check if they exist to prevent build failure if names differ
+  if [ -f "${_icon_file}" ]; then
+    cp "${_icon_file}" "squashfs-root/assets/icons/${_icon_file}"
+  fi
+
+  if [ -f "${_desktop_file}" ]; then
+    cp "${_desktop_file}" "squashfs-root/assets/launchers/${_desktop_file}"
+
+  # 4. CRITICAL: Rewrite the .desktop file to point to new path
+  #    This rewrites the 'Exec' line so it will execute the AppImage from /opt/appimages/
+  #    If the .desktop and svg files will be provided in the PKGBUILD directory, comment out the next two lines that start with "desktop-file-edit".
+  #  desktop-file-edit --set-key=Exec --set-value="${_install_path} %U" "squashfs-root/assets/launchers/${_desktop_file}"
+  #  desktop-file-edit --set-key=TryExec --set-value="${_install_path}" "squashfs-root/assets/launchers/${_desktop_file}"
+  fi
+}
+
+package() {
+  # 1. Install the actual AppImage to /opt/appimages/
+  install -d "${pkgdir}${_install_dir}"
+  install -Dm755 "${srcdir}/${_appimage_filename}" "${pkgdir}${_install_path}"
+
+  # 2. Install the Desktop Entry and Icon to standard system paths
+  if [ -f "${srcdir}/squashfs-root/assets/launchers/${_desktop_file}" ]; then
+    install -Dm644 "squashfs-root/assets/launchers/${_desktop_file}" "${pkgdir}/usr/share/applications/${_desktop_file}"
+  fi
+
+  if [ -f "${srcdir}/squashfs-root/assets/icons/${_icon_file}" ]; then
+    install -Dm644 "squashfs-root/assets/icons/${_icon_file}" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/${_icon_file}"
+  fi
+
+  # 3. Create the symlink in /usr/bin so you can launch it from terminal via 'appname'
+  install -d "${pkgdir}/usr/bin"
+  ln -s "${_install_path}" "${pkgdir}/usr/bin/${_pkgname}"
+}

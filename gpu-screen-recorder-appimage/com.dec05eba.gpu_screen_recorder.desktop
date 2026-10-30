@@ -1,0 +1,14 @@
+[Desktop Entry]
+StartupWMClass=gpu-screen-recorder-gtk
+Type=Application
+Name=GPU Screen Recorder
+GenericName=Screen recorder
+Comment=A gpu based screen recorder / streaming program
+Icon=com.dec05eba.gpu_screen_recorder
+Exec=gpu-screen-recorder-gtk
+Terminal=false
+Keywords=gpu-screen-recorder;screen recorder;streaming;twitch;replay;shadowplay;
+Categories=AudioVideo;Recorder;
+X-AppImage-Name=gpu-screen-recorder
+X-AppImage-Version=6.1.0
+X-AppImage-Arch=x86_64

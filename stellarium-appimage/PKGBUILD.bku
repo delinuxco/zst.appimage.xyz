@@ -1,0 +1,53 @@
+#  Maintainer: John Machado <john at delinuxco dot com>
+
+_pkgname=Stellarium
+pkgname=stellarium-appimage
+pkgver=26.2
+pkgrel=1
+pkgdesc="Stellarium is a free open source planetarium for your computer. It shows a realistic sky in 3D, just like what you see with the naked eye, binoculars or a telescope."
+arch=('x86_64')
+url="https://stellarium.org/"
+license=('LIC')
+provides=('stellarium')
+conflicts=('stellarium-lite' 'stellarium-qt-bin')
+depends=(
+    'fuse-common'
+    'fuse2'
+    'fuse3'
+)
+#optdepends=(
+#    'libappindicator-gtk3: tray icon'
+#    'libayatana-appindicator: tray icon'
+#)
+options=(!strip)
+source_x86_64=(https://github.com/Stellarium/stellarium/releases/download/v${pkgver}/${_pkgname}-${pkgver}-qt5-${arch}.AppImage)
+#               https://github.com/Stellarium/stellarium/releases/download/v26.2/stellarium-26.2-qt5-x86_64.AppImage
+sha256sums_x86_64=('cac4cd722f965a457ce066ed6fa6e7ce06f81ccf2eb10857eecad79d7dfa37f3')
+_filename=${_pkgname}-${pkgver}-qt5-${arch}.AppImage
+
+prepare() {
+  cd "${srcdir}"
+  chmod +x ${_filename}
+  ./${_filename} --appimage-extract
+
+        mkdir -p "${srcdir}/squashfs-root/assets/icons/"
+        mkdir -p "${srcdir}/squashfs-root/assets/launchers/"
+
+        cp /home/delinuxco/DLC_Builds/appimages/stellarium-appimage/local_assets/stellarium.svg "${srcdir}/squashfs-root/assets/icons/stellarium.svg"
+        cp /home/delinuxco/DLC_Builds/appimages/stellarium-appimage/local_assets/org.stellarium.Stellarium.desktop "${srcdir}/squashfs-root/assets/launchers/org.stellarium.Stellarium.desktop"
+
+#        sed -i -E 's|Exec=AppRun --no-sandbox %U|Exec=/opt/appimages/Template.AppImage|g' "${srcdir}/squashfs-root/assets/launchers/${_pkgname}.desktop"
+}
+
+package() {
+  install -Dm755 "${srcdir}/${_filename}" "${pkgdir}/opt/appimages/stellarium.AppImage"
+
+  install -Dm644 "${srcdir}/squashfs-root/assets/icons/stellarium.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/stellarium.svg"
+
+  install -Dm644 "${srcdir}/squashfs-root/assets/launchers/org.stellarium.Stellarium.desktop" "${pkgdir}/usr/share/applications/org.stellarium.Stellarium.desktop"
+
+  install -d "$pkgdir/usr/bin"
+
+  ln -s /opt/appimages/stellarium.AppImage "${pkgdir}/usr/bin/stellarium" 
+
+}

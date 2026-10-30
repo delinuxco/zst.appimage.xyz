@@ -1,0 +1,25 @@
+[Desktop Entry]
+Version=1.0
+Name=ungoogled-chromium
+GenericName=Web Browser
+Comment=Access the Internet
+Exec=/opt/appimages/ungoogled-chromium.AppImage %u
+StartupNotify=true
+Terminal=false
+Icon=chromium
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/http;x-scheme-handler/https;
+Actions=new-window;new-private-window;
+X-AppImage-Version=154.0.8037.57-1
+Name[en_US]=ungoogled-chromium.desktop
+
+[Desktop Action new-window]
+Name=New Window
+Exec=/opt/appimages/ungoogled-chromium.AppImage %u
+
+[Desktop Action new-private-window]
+Name=New Incognito Window
+Exec=/opt/appimages/ungoogled-chromium.AppImage --incognito %u
+
+

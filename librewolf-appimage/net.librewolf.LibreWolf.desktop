@@ -1,0 +1,41 @@
+[Desktop Entry]
+Name=LibreWolf
+Exec=librewolf %u
+Icon=librewolf
+Type=Application
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;application/x-xpinstall;application/pdf;application/json;
+StartupWMClass=librewolf
+Categories=Network;WebBrowser;
+StartupNotify=true
+Terminal=false
+X-MultipleArgs=false
+Keywords=Internet;WWW;Browser;Web;Explorer;
+Comment=Custom and independent version of Firefox, with privacy, security and user freedom.
+Actions=new-window;new-private-window;profilemanager;new-jailed-window;new-jailed-private-window;
+X-AppImage-Version=156.0.1-1
+
+[Desktop Action new-window]
+Name=Open a New Window
+Exec=librewolf %u
+
+[Desktop Action new-private-window]
+Name=Open a New Private Window
+Exec=librewolf --private-window %u
+
+[Desktop Action profilemanager]
+Name=Open the Profile Manager
+Exec=librewolf --ProfileManager %u
+
+[Desktop Action new-jailed-window]
+Name=Run Librewolf Jailed
+Name[en_GB]=Run Librewolf Jailed
+Name[en_US]=Run Librewolf Jailed
+Name[en_ZA]=Run Librewolf Jailed
+Exec=firejail --appimage /opt/appimages/librewolf.AppImage %u
+
+[Desktop Action new-jailed-private-window]
+Name=Run Librewolf Jailed Private Window
+Name[en_GB]=Run Librewolf Jailed Private Window
+Name[en_US]=Run Librewolf Jailed Private Window
+Name[en_ZA]=Run Librewolf Jailed Private Window
+Exec=firejail --appimage /opt/appimages/librewolf.AppImage --private-window %u

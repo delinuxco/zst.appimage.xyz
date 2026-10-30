@@ -1,0 +1,40 @@
+[Desktop Entry]
+Type=Application
+Version=1.5
+# Default/Fallback Name (English)
+Name=OpenRGB
+# Locale-specific Names
+Name[en_US]=OpenRGB
+Name[es_ES]=OpenRGB
+Name[fr_FR]=OpenRGB
+Name[de_DE]=OpenRGB
+Name[it_IT]=OpenRGB
+Name[pt_BR]=OpenRGB
+Name[pt_PT]=OpenRGB
+Name[zh_CN]=OpenRGB
+Name[ja_JP]=OpenRGB
+Name[ko_KR]=OpenRGB
+Name[ru_RU]=OpenRGB
+
+# Default/Fallback Comment (English)
+Comment=Control RGB lighting
+# Locale-specific Comments
+Comment[en_US]=Control RGB lighting
+Comment[es_ES]=Controlar la iluminación RGB
+Comment[fr_FR]=Contrôler l'éclairage RGB
+Comment[de_DE]=RGB-Beleuchtung steuern
+Comment[it_IT]=Controlla l'illuminazione RGB
+Comment[pt_BR]=Controlar a iluminação RGB
+Comment[pt_PT]=Controlar a iluminação RGB
+Comment[zh_CN]=控制 RGB 灯光
+Comment[ja_JP]=RGBライティングを制御
+Comment[ko_KR]=RGB 조명 제어
+Comment[ru_RU]=Управление RGB-подсветкой
+
+Exec=env QT_SCALE_FACTOR=1.2 /opt/appimages/openrgb.AppImage
+Icon=org.openrgb.OpenRGB
+StartupWMClass=openrgb
+TryExec=/opt/appimages/openrgb.AppImage
+Terminal=false
+Categories=Utility;
+

@@ -1,0 +1,46 @@
+#  Maintainer: John Machado <john at delinuxco dot com>
+
+_pkgname=RustDesk
+pkgname=rustdesk-client-appimage
+pkgver=1.5.0
+pkgrel=1
+pkgdesc="RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration.This version will not run unattended as a service."
+arch=('x86_64')
+url="https://github.com/rustdesk/rustdesk"
+license=('AGPL-3.0')
+provides=('rustdesk')
+conflicts=('rustdesk-bin' 'rustdesk-appimage')
+depends=(
+    'fuse-common'
+    'fuse2'
+    'fuse3'
+ )
+optdepends=(
+    'libappindicator-gtk3: tray icon'
+    'libayatana-appindicator: tray icon'
+)
+source_x86_64=("https://github.com/rustdesk/rustdesk/releases/download/${pkgver}/rustdesk-${pkgver}-${arch}.AppImage")
+sha256sums_x86_64=('422ebb915b4c709f3511cfa2941abcefdcb1d3d60f673f5a20cf88a4ab2c9aa5')
+options=(!strip)
+_filename=rustdesk-${pkgver}-${arch}.AppImage
+
+prepare() {
+  cd "${srcdir}"
+  chmod +x ${_filename}
+  ./${_filename} --appimage-extract
+
+        mkdir -p "${srcdir}/squashfs-root/assets/icons/"
+        mkdir -p "${srcdir}/squashfs-root/assets/launchers/"
+
+        cp "${srcdir}/squashfs-root/rustdesk.svg" "${srcdir}/squashfs-root/assets/icons/rustdesk.svg"
+        cp "${srcdir}/squashfs-root/rustdesk.desktop" "${srcdir}/squashfs-root/assets/launchers/${_pkgname}.desktop"
+
+        sed -i 's@Exec=usr/share/rustdesk/rustdesk@Exec=/opt/appimages/RustDesk.AppImage@g' "${srcdir}/squashfs-root/assets/launchers/${_pkgname}.desktop"
+}
+
+package() {
+  install -Dm755 "${srcdir}/${_filename}" "${pkgdir}/opt/appimages/${_pkgname}.AppImage"
+
+  install -Dm755 "${srcdir}/squashfs-root/rustdesk.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/rustdesk.svg"
+  install -Dm755 "${srcdir}/squashfs-root/assets/launchers/RustDesk.desktop" "${pkgdir}/usr/share/applications/rustdesk.desktop"
+}

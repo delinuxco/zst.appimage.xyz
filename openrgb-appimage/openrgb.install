@@ -1,0 +1,8 @@
+#! /bin/bash
+
+
+
+# Reload the rules
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+

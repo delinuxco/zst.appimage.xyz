@@ -1,0 +1,122 @@
+#  Maintainer: Joao Machado <joao at delinux dot co>
+
+pkgname=libreoffice-fresh-full-appimage
+_pkgname=LibreOffice
+pkgver="26.8.1.1"
+_pkgver="26.8"
+pkgsubv=libreoffice26.8
+pkgrel=1
+pkgdesc="LibreOffice is a free and powerful office suite, and a successor to OpenOffice.org (commonly known as OpenOffice)."
+arch=('x86_64')
+url="https://www.libreoffice.org"
+license=('GPL')
+provides=('libreoffice-fresh')
+conflicts=(libreoffice libreoffice-still)
+source_x86_64=("https://appimages.libreitalia.org/portable/LibreOffice-${pkgver}.full.help-${arch}.AppImage")
+#               https://appimages.libreitalia.org/portable/LibreOffice-26.2.5.1.full-x86_64.AppImage
+md5sums_x86_64=('01a58027caf7b917e227085bedce701c')
+options=(!strip)
+_filename=LibreOffice-${pkgver}.full.help-${arch}.AppImage
+
+    prepare() {
+        cd "${srcdir}"
+        chmod +x ${_filename}
+        ./${_filename} --appimage-extract
+
+        mkdir -p "${srcdir}/squashfs-root/assets/icons/"
+        mkdir -p "${srcdir}/squashfs-root/assets/launchers/"
+
+        cp "${srcdir}/squashfs-root/usr/share/icons/hicolor/scalable/apps/${pkgsubv}-base.svg" "${srcdir}/squashfs-root/assets/icons/libreoffice-base.svg"
+        cp "${srcdir}/squashfs-root/usr/share/icons/hicolor/scalable/apps/${pkgsubv}-calc.svg" "${srcdir}/squashfs-root/assets/icons/libreoffice-calc.svg"
+        cp "${srcdir}/squashfs-root/usr/share/icons/hicolor/scalable/apps/${pkgsubv}-draw.svg" "${srcdir}/squashfs-root/assets/icons/libreoffice-draw.svg"
+        cp "${srcdir}/squashfs-root/usr/share/icons/hicolor/scalable/apps/${pkgsubv}-impress.svg" "${srcdir}/squashfs-root/assets/icons/libreoffice-impress.svg"
+        cp "${srcdir}/squashfs-root/usr/share/icons/hicolor/scalable/apps/${pkgsubv}-math.svg" "${srcdir}/squashfs-root/assets/icons/libreoffice-math.svg"
+        cp "${srcdir}/squashfs-root/usr/share/icons/hicolor/scalable/apps/${pkgsubv}-writer.svg" "${srcdir}/squashfs-root/assets/icons/libreoffice-writer.svg"
+        cp "${srcdir}/squashfs-root/usr/share/icons/hicolor/scalable/apps/${pkgsubv}-main.svg" "${srcdir}/squashfs-root/assets/icons/libreoffice-main.svg"
+        cp "${srcdir}/squashfs-root/usr/share/icons/hicolor/scalable/apps/${pkgsubv}-startcenter.svg" "${srcdir}/squashfs-root/assets/icons/libreoffice-startcenter.svg"
+
+#*************LibreOffice Base *******************************************************************************************************************************************
+        cp "${srcdir}/squashfs-root/opt/${pkgsubv}/share/xdg/base.desktop" "${srcdir}/squashfs-root/assets/launchers/libreoffice-base.desktop"
+        sed -i 's@Exec=libreoffice26.8 --base %U@Exec=/opt/appimages/LibreOffice.AppImage --base %U@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-base.desktop"
+        sed -i 's@Exec=libreoffice26.8 --base@Exec=/opt/appimages/LibreOffice-AppImage --base@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-base.desktop"
+        sed -i 's@Icon=libreoffice26.8-base@Icon=libreoffice-base@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-base.desktop"
+        sed -i 's@Name=libreoffice26.8 Base@Name=LibreOffice Base@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-base.desktop"
+
+#*************LibreOffice Calc *******************************************************************************************************************************************
+        cp "${srcdir}/squashfs-root/opt/${pkgsubv}/share/xdg/calc.desktop" "${srcdir}/squashfs-root/assets/launchers/libreoffice-calc.desktop"
+        sed -i 's@Exec=libreoffice26.8 --calc %U@Exec=/opt/appimages/LibreOffice.AppImage --calc %U@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-calc.desktop"
+        sed -i 's@Exec=libreoffice26.8 --calc@Exec=/opt/appimages/LibreOffice.AppImage --calc@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-calc.desktop"
+        sed -i 's@Icon=libreoffice26.8-calc@Icon=libreoffice-calc@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-calc.desktop"
+        sed -i 's@Name=libreoffice26.8 Calc@Name=LibreOffice Calc@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-calc.desktop"
+
+#*************LibreOffice Draw ******************************************************************************************************************************************
+        cp "${srcdir}/squashfs-root/opt/${pkgsubv}/share/xdg/draw.desktop" "${srcdir}/squashfs-root/assets/launchers/libreoffice-draw.desktop"
+        sed -i 's@Exec=libreoffice26.8 --draw%U@Exec=/opt/appimages/LibreOffice.AppImage --draw %U@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-draw.desktop"
+        sed -i 's@Exec=libreoffice26.8 --draw@Exec=/opt/appimages/LibreOffice.AppImage --draw@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-draw.desktop"
+        sed -i 's@Icon=libreoffice26.8-draw@Icon=libreoffice-draw@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-draw.desktop"
+        sed -i 's@Name=libreoffice26.8 Draw@Name=LibreOffice Draw@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-draw.desktop"
+
+#*************LibreOffice Impress *****************************************************************************************************************************************
+        cp "${srcdir}/squashfs-root/opt/${pkgsubv}/share/xdg/impress.desktop" "${srcdir}/squashfs-root/assets/launchers/libreoffice-impress.desktop"
+        sed -i 's@Exec=libreoffice26.8 --impress %U@Exec=/opt/appimages/LibreOffice.AppImage --impress %U@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-impress.desktop"
+        sed -i 's@Exec=libreoffice26.8 --impress@Exec=/opt/appimages/LibreOffice.AppImage --impress@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-impress.desktop"
+        sed -i 's@Icon=libreoffice26.8-impress@Icon=libreoffice-impress@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-impress.desktop"
+        sed -i 's@Name=libreoffice26.8 Impress@Name=LibreOffice Impress@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-impress.desktop"
+
+#*************LibreOffice Math *******************************************************************************************************************************************
+        cp "${srcdir}/squashfs-root/opt/${pkgsubv}/share/xdg/math.desktop" "${srcdir}/squashfs-root/assets/launchers/libreoffice-math.desktop"
+        sed -i 's@Exec=libreoffice26.8 --math %U@Exec=/opt/appimages/LibreOffice.AppImage --base %U@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-math.desktop"
+        sed -i 's@Exec=libreoffice26.8 --math@Exec=/opt/appimages/LibreOffice.AppImage --math@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-math.desktop"
+        sed -i 's@Icon=libreoffice26.8-math@Icon=libreoffice-math@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-math.desktop"
+        sed -i 's@Name=libreoffice26.8 Math@Name=LibreOffice Math@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-math.desktop"
+
+#*************LibreOffice StartCenter *************************************************************************************************************************************
+        cp "${srcdir}/squashfs-root/opt/${pkgsubv}/share/xdg/startcenter.desktop" "${srcdir}/squashfs-root/assets/launchers/libreoffice-startcenter.desktop"
+        sed -i 's@Exec=libreoffice26.8 %U@Exec=/opt/appimages/LibreOffice.AppImage %U@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-startcenter.desktop"
+        sed -i 's@Exec=libreoffice26.8 --startcenter@Exec=/opt/appimages/LibreOffice.AppImage --startcenter@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-startcenter.desktop"
+        sed -i 's@Icon=libreoffice26.8-startcenter@Icon=libreoffice-startcenter@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-startcenter.desktop"
+        sed -i 's@Name=libreoffice26.8@Name=LibreOffice@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-startcenter.desktop"
+        sed -i 's@Exec=libreoffice26.8 --writer@Exec=/opt/appimages/LibreOffice.AppImage --writer@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-startcenter.desktop"
+        sed -i 's@Exec=libreoffice26.8 --calc@Exec=/opt/appimages/LibreOffice.AppImage --calc@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-startcenter.desktop"
+        sed -i 's@Exec=libreoffice26.8 --impress@Exec=/opt/appimages/LibreOffice.AppImage --impress@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-startcenter.desktop"
+        sed -i 's@Exec=libreoffice26.8 --draw@Exec=/opt/appimages/LibreOffice.AppImage --draw@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-startcenter.desktop"
+        sed -i 's@Exec=libreoffice26.8 --base@Exec=/opt/appimages/LibreOffice.AppImage --base@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-startcenter.desktop"
+        sed -i 's@Exec=libreoffice26.8 --math@Exec=/opt/appimages/LibreOffice.AppImage --math@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-startcenter.desktop"
+
+#*************LibreOffice Writer ******************************************************************************************************************************************
+        cp "${srcdir}/squashfs-root/opt/${pkgsubv}/share/xdg/writer.desktop" "${srcdir}/squashfs-root/assets/launchers/libreoffice-writer.desktop"
+        sed -i 's@Exec=libreoffice26.8 --writer %U@Exec=/opt/appimages/LibreOffice.AppImage --writer %U@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-writer.desktop"
+        sed -i 's@Exec=libreoffice26.8 --writer@Exec=/opt/appimages/LibreOffice.AppImage --writer@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-writer.desktop"
+        sed -i 's@Icon=libreoffice26.8-writer@Icon=libreoffice-writer@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-writer.desktop"
+        sed -i 's@Name=libreoffice26.8 Writer@Name=LibreOffice Writer@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-writer.desktop"
+
+#*************LibreOffice XSLT Filter *************************************************************************************************************************************
+        cp "${srcdir}/squashfs-root/opt/${pkgsubv}/share/xdg/xsltfilter.desktop" "${srcdir}/squashfs-root/assets/launchers/libreoffice-xsltfilter.desktop"
+        sed -i 's@Exec=libreoffice26.8 %U@Exec=/opt/appimages/LibreOffice.AppImage %U@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-xsltfilter.desktop"
+        sed -i 's@Icon=libreoffice26.8-base@Icon=libreoffice-base@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-xsltfilter.desktop"
+        sed -i 's@Name=libreoffice26.8 XSLT based filters@Name=LibreOffice XSLT based filters@g' "${srcdir}/squashfs-root/assets/launchers/libreoffice-xsltfilter.desktop"
+
+}
+
+package() {
+  install -Dm755 "${srcdir}/${_filename}" "${pkgdir}/opt/appimages/${_pkgname}.AppImage"
+
+  install -Dm644 "${srcdir}/squashfs-root/assets/icons/libreoffice-base.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/libreoffice-base.svg"
+  install -Dm644 "${srcdir}/squashfs-root/assets/icons/libreoffice-calc.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/libreoffice-calc.svg"
+  install -Dm644 "${srcdir}/squashfs-root/assets/icons/libreoffice-draw.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/libreoffice-draw.svg"
+  install -Dm644 "${srcdir}/squashfs-root/assets/icons/libreoffice-impress.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/libreoffice-impress.svg"
+  install -Dm644 "${srcdir}/squashfs-root/assets/icons/libreoffice-math.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/libreoffice-math.svg"
+  install -Dm644 "${srcdir}/squashfs-root/assets/icons/libreoffice-writer.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/libreoffice-writer.svg"
+  install -Dm644 "${srcdir}/squashfs-root/assets/icons/libreoffice-main.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/libreoffice-main.svg"
+  install -Dm644 "${srcdir}/squashfs-root/assets/icons/libreoffice-startcenter.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/libreoffice-startcenter.svg"
+
+  install -Dm644 "${srcdir}/squashfs-root/assets/launchers/libreoffice-base.desktop" "${pkgdir}/usr/share/applications/libreoffice-base.desktop"
+  install -Dm644 "${srcdir}/squashfs-root/assets/launchers/libreoffice-calc.desktop" "${pkgdir}/usr/share/applications/libreoffice-calc.desktop"
+  install -Dm644 "${srcdir}/squashfs-root/assets/launchers/libreoffice-draw.desktop" "${pkgdir}/usr/share/applications/libreoffice-draw.desktop"
+  install -Dm644 "${srcdir}/squashfs-root/assets/launchers/libreoffice-impress.desktop" "${pkgdir}/usr/share/applications/libreoffice-impress.desktop"
+  install -Dm644 "${srcdir}/squashfs-root/assets/launchers/libreoffice-math.desktop" "${pkgdir}/usr/share/applications/libreoffice-math.desktop"
+  install -Dm644 "${srcdir}/squashfs-root/assets/launchers/libreoffice-startcenter.desktop" "${pkgdir}/usr/share/applications/libreoffice-startcenter.desktop"
+  install -Dm644 "${srcdir}/squashfs-root/assets/launchers/libreoffice-writer.desktop" "${pkgdir}/usr/share/applications/libreoffice-writer.desktop"
+  install -Dm644 "${srcdir}/squashfs-root/assets/launchers/libreoffice-xsltfilter.desktop" "${pkgdir}/usr/share/applications/libreoffice-xsltfilter.desktop"
+
+}

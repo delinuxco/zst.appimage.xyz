@@ -1,0 +1,25 @@
+#  Maintainer: John Machado <john at delinuxco dot com>
+pkgname=artcraft-office-suite
+pkgver="0.3"
+pkgrel=1
+pkgdesc="A simple meta-package to install ArtCraft's, WordCraft, GridCraft and DeckCraft office applications"
+arch=('x86_64')
+url="https://delinux.co"
+license=('GPL-V3')
+depends=(
+    'wordcraft-appimage'
+    'gridcraft-appimage'
+    'deckcraft-appimage'
+)
+source=()
+makedepends=()
+
+# A meta-package does not need a build or package function 
+# because it contains no files of its own. 
+# However, we define an empty package function to satisfy makepkg.
+
+package() {
+  # No files to install in a meta-package
+  return 0
+}
+

@@ -1,0 +1,50 @@
+#  Maintainer: John Machado <john at delinuxco dot com>
+
+_pkgname=upscayl
+pkgname=upscayl-appimage
+pkgver=2.15.0
+pkgrel=1
+pkgdesc="Free and Open Source AI Image Upscaler"
+arch=('x86_64')
+url=https://upscayl.org
+license=(' AGPL-3.0')
+provides=('upscayl')
+conflicts=('upscayl-desktop' 'upscayl-bin')
+depends=(
+    'libvips'
+    'openjpeg2'
+    'electron'
+    'nodejs'
+)
+optdepends=(
+    'libappindicator-gtk3: tray icon'
+    'libayatana-appindicator: tray icon'
+)
+options=(!strip)
+source_x86_64=("https://github.com/upscayl/upscayl/releases/download/${pkgver}/${_pkgname}-${pkgver}-linux.AppImage")
+#               https://github.com/upscayl/upscayl/releases/download/v2.11.5/upscayl-2.11.5-linux.AppImage
+sha256sums_x86_64=('6459457e589bcb99e779ea442dce608bacda33916b7019a8862b7c6252aa8229')
+_filename=${_pkgname}-${pkgver}-linux.AppImage
+
+prepare() {
+  cd "${srcdir}"
+  chmod +x ${_filename}
+  ./${_filename} --appimage-extract
+
+        mkdir -p "${srcdir}/squashfs-root/assets/icons/"
+        mkdir -p "${srcdir}/squashfs-root/assets/launchers/"
+
+        cp "${srcdir}/squashfs-root/upscayl.png" "${srcdir}/squashfs-root/assets/icons/upscayl.png"
+        cp "${srcdir}/squashfs-root/upscayl.desktop" "${srcdir}/squashfs-root/assets/launchers/Upscayl.desktop"
+
+        sed -i -E 's|Exec=AppRun --no-sandbox %U|Exec=/opt/appimages/Upscayl.AppImage|g' "${srcdir}/squashfs-root/assets/launchers/Upscayl.desktop"
+}
+
+package() {
+  install -Dm755 "${srcdir}/${_filename}" "${pkgdir}/opt/appimages/Upscayl.AppImage"
+
+  install -Dm644 "${srcdir}/squashfs-root/assets/icons/upscayl.png" "${pkgdir}/usr/share/icons/hicolor/512x512/apps/upscayl.png"
+
+  install -Dm644 "${srcdir}/squashfs-root/assets/launchers/Upscayl.desktop" "${pkgdir}/usr/share/applications/Upscayl.desktop"
+
+}

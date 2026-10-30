@@ -1,0 +1,14 @@
+pkgbase = template-appimage
+	pkgdesc = Template app description.
+	pkgver = 1.2.3
+	pkgrel = 0
+	arch = x86_64
+    url = https://example.com
+	license = GPL
+	provides = template
+	conflicts = template-desktop
+	options = !strip
+	source_x86_64 = https://www.template.com/v1.2.3/Template-1.2.3.AppImage
+	sha256sums_x86_64 = f7f3dfa6e5006c550853dff7c8c415e236443e6fde43751c370c04ff0bdf9683
+
+pkgname = template-appimage
