@@ -1,1 +1,1 @@
-AppImages for Arch based systems
+AppImage PKGBUILD files for building Arch packages.
