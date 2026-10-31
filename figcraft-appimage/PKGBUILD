@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=figcraft-appimage
 _pkgname=figcraft
-pkgver="0.12.1"
+pkgver="0.13.1"
 pkgrel=1
 pkgdesc="Interface design and prototyping: open source, collaborative and built in pure Rust"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    'c52be046d7bea73790f3584ffca6ec7935df229adce8f8e483b03242ee2aab1f'
+    '2fa44efdf4878dea7eb79b1227f274bccb298aab6431d78d0e8370ea6c125474'
     '811d802691a7269b7d01dc401248c009cd7c2c1b2dccb984178279a5159457dc'
 )
 
