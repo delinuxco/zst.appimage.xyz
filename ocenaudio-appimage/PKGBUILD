@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=ocenaudio-appimage
 _pkgname=ocenaudio
-pkgver=3.22.0
+pkgver=3.22.1
 pkgrel=1
 pkgdesc="Easy, fast and powerful audio editor."
 arch=('x86_64')
@@ -52,7 +52,7 @@ source=("${_source_url}"
         "${_desktop_file}"
         "${_icon_file}"
 )
-sha256sums=('0d69f64b20e51fc268acc9311e943b4a247f8066a22ea9c9d152fdee410f472f'
+sha256sums=('7c99deb6f429f40fbc4df489dee07873a59506dba26bb9235a7f3962a7898a88'
             '1158d04570266c71f82085425a5fa418da21b36d7573dc2063cb59ba82ebf1d9'
             'c3a19968178927b28950b3c1444e680cb8584a292f30958d6d6b05b504eed148'
 )
