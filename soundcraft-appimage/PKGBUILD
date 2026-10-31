@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=soundcraft-appimage
 _pkgname=soundcraft
-pkgver="0.14.0"
+pkgver="0.15.0"
 pkgrel=1
 pkgdesc="Recording, editing and mixing audio; an open-source, clean-room reimplementation of Avid Pro Tools"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    'e1f2eee16c6da59db23c0724e97992029bdc3a19a8e64704753d398db7832387'
+    '107a597fd3f6d45d921047af274e550dedeefb4d7bc8c13ec3688091309f8126'
     '23ebdd40d2138db280b890985cbcd9748e3fee0a86c37ea34be96008e9eedc4d'
 )
 
