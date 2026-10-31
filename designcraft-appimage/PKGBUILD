@@ -6,8 +6,8 @@
 ###############################################################################
 pkgname=designcraft-appimage
 _pkgname=designcraft
-pkgver="0.14.0"
-pkgrel=2
+pkgver="0.15.2"
+pkgrel=1
 pkgdesc="An open-source, clean-room reimplementation of Adobe InDesign"
 arch=('x86_64')
 url="https://getartcraft.com/"
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    'c7b9a4b760e4c94b05fde4cd1c266823a736bc3fa507150cff0dc1920edfc28e'
+    '6d46e10f8e7c2746b6daa4c565c6c6a85329c1e6192e0aa0bbf526ba91a3efa0'
     'dc1cfa152874f8acb799ef6be3b3477f21b37c1780000acf942ad62fb99fbb4d'
 )
 
