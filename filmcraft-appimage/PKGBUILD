@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=filmcraft-appimage
 _pkgname=filmcraft
-pkgver="0.14.0"
+pkgver="0.15.0"
 pkgrel=1
 pkgdesc="Video editing, color and sound; an open-source, clean-room reimplementation of Adobe Premiere Pro, rebuilt in pure Rust"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    '133b8b88db6dee3fa47dd39fc1c9dd9228283806a37b951587cc6365aec9a3d3'
+    '4bcb119c1aa60df54ce3338d7aa48e3f14d61569f7bc63851a00bdc89249647b'
     'e938e6f4962d479ab832293d525a2d4a356ff92e094fd613c4ffa04ae01fe22e'
 )
 
