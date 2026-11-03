@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=vectorcraft-appimage
 _pkgname=vectorcraft
-pkgver="0.20.0"
+pkgver="0.21.0"
 pkgrel=1
 pkgdesc="A fast, open-source, clean-room take on the Adobe Illustrator workflow."
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    'b625bae80558f95d94b9cd0ce74224d2a83180106dab2619559551cab216ead4'
+    '94444a0970f495e2251435e60fe3dbead77f7b136bf334547426a920cf2e9858'
     '47a442a33bf36c57e1026ce573ef14e6f15ad9c2e2fa3ffe780c3cc5a7ea57fb'
 )
 
