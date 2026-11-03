@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=audacity-appimage
 _pkgname=audacity
-pkgver=4.0.1
+pkgver=4.0.2
 pkgrel=1
 pkgdesc="Audacity is the world's most popular free software for recording and editing audio.."
 arch=('x86_64')
@@ -49,10 +49,15 @@ optdepends=()
 options=(!strip)
 
 # All source files in root directory of PKGBUILD must be listed and with corresponding sha256/md5 sums
-source=("${_source_url}"
-        "${_icon_file}")
-sha256sums=('ca2f04f172124d1f18ac608749854c5d31f04ab266a758c348190c05d9b2087c'
-            '0bb8341d66df402e4862ef5ffec9b463e30d073eab1a07f0312e02deb34e6064')
+source=(
+    "${_source_url}"
+    "${_icon_file}"
+)
+
+sha256sums=(
+    'a5f8787aa13cdb500a60fc013403b986776876b960cca962bc6e7fff066172f3'
+    '0bb8341d66df402e4862ef5ffec9b463e30d073eab1a07f0312e02deb34e6064'
+)
 
 prepare() {
 
