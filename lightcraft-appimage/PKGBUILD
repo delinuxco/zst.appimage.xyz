@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=lightcraft-appimage
 _pkgname=lightcraft
-pkgver="0.17.0"
+pkgver="0.18.0"
 pkgrel=1
 pkgdesc="Photo library and raw development; an open-source, clean-room reimplementation of Adobe Lightroom, rebuilt in pure Rust"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    'e592a27a94ad20a0a0baee7893e92d9079ec412495f987a9c0854b99ec00b21b'
+    'f71606e446ff32cae9cdd050c51dd60202a97c116658f026ace6934a1d028b76'
     'a36640036befee2483a8cef056472502b44e4de430364104dedc8ee17660e7a6'
 )
 
