@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=designcraft-appimage
 _pkgname=designcraft
-pkgver="0.16.0"
+pkgver="0.17.0"
 pkgrel=1
 pkgdesc="An open-source, clean-room reimplementation of Adobe InDesign"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    'ecccda5dc38c6ca5de192e450f1bfa5393b43bd683868b0e5306ae2dc975c827'
+    '4451904013117f7ff2060a9710b0ce397d1016451e4b984cc955dc0547eb5621'
     'dc1cfa152874f8acb799ef6be3b3477f21b37c1780000acf942ad62fb99fbb4d'
 )
 
