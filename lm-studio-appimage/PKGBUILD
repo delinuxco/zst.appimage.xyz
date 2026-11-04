@@ -6,8 +6,8 @@
 ###############################################################################
 pkgname=lm-studio-appimage
 _pkgname=lm-studio
-pkgver="0.4.26"
-_pkgver="0.4.26-4"
+pkgver="0.4.28"
+_pkgver="0.4.28-2"
 pkgrel=1
 pkgdesc="Experiment with LLMs on your computer. Chat interface and programmable API."
 arch=('x86_64')
@@ -61,7 +61,7 @@ source=(
     "${_desktop_file}"
 )
 sha512sums=(
-    'c19fabf1ac6241d87c84027d3d3ca701d888de4294272eb19311575582bd31c18512c518115bb4ebeb4a1b7a89a8c6264140cfdc8e38276516d5a75c8563e55b'
+    '2b6c86470effb5742ad770538cc134769c96f637f859c31619770e5f3b2d795d64d31689cf63c247ad96d740aebcdb6bd245d9a8e4cbb984ce97f0211551f6f5'
     '46fcaef72b8d340c047b45e6c28e3a5691082317eb84c815337881ea30fe2f45aae8887df7c146e919682925d9198bb946aeea6cff8f66f9072db4ab18c46188'
     'a36d20906d3cdfe91c360755333d923c214f594761ebe0c7e5359826a96fb99131ffd5256464565cd810142d93caae634abb119dec6de8214e8feafd6d861659'
 )
