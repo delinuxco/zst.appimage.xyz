@@ -6,8 +6,8 @@
 ###############################################################################
 pkgname=lm-studio-bionic-appimage
 _pkgname=lm-studio-bionic
-pkgver="1.1.8"
-_pkgver="1.1.8-10"
+pkgver="1.1.10"
+_pkgver="1.1.10-8"
 pkgrel=1
 pkgdesc="Experiment with LLMs on your computer. Chat interface and programmable API."
 arch=('x86_64')
@@ -56,7 +56,7 @@ source=(
     "${_desktop_file}"
 )
 sha256sums=(
-    '835c485e8346c0b3aba18d9e979524a86257bdf5cca489ae8216928312a58001'
+    '730ddd3f5d90c5d0aadd4388a0e6dd14bd6125bb17e944139b5bb9d61ee18c7f'
     '5134954b5296c4cb12b3b9df45f72b23b4c8a973ffda6e658a631b0d089e23a6'
     'e6d99b369f9382a6d0b0e2315680fa669b612a9e0dd749fe40e44c147bba4adf'
 )
