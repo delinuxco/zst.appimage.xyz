@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=photocraft-appimage
 _pkgname=photocraft
-pkgver="0.20.1"
+pkgver="0.20.2"
 pkgrel=1
 pkgdesc="Image editing; an open-source, clean-room reimplementation of Adobe Photoshop, rebuilt in pure Rust"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    'd7c605fd05ea2334e2771e1358fe4d900dbbff14f02d766070c141e2e3ad4bbf'
+    'be18d175a0a6278c30124241793bb77b357ef96046d81f1d8189e492c14bc0ae'
     '4a433d796f45167f128241f025c1bb0f90fc096324651f6c765a7233a567fff4'
 )
 
