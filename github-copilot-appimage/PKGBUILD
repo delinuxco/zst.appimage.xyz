@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=github-copilot-appimage
 _pkgname=github-copilot
-pkgver="1.1.33"
+pkgver="1.1.35"
 pkgrel=1
 pkgdesc="The GitHub Copilot app is a desktop application for agent-driven development that brings parallel workstreams, GitHub integration, and PR lifecycle management into one place"
 arch=('x86_64')
@@ -55,7 +55,7 @@ source=(
 )
 
 sha256sums=(
-    '767bfd86e40e85ff7eb8ceab1c5b30a283a04283e613c4e2ed4a16fb483340e1'
+    '89ffae20f2387c0a218c1e9e01b5eb4a63c37e69aa644b482901553668f4ccc5'
     '3862cbc0a73dabae0c0764b00ee86577b536954746e57779983585f85f779c66'
 )
 
