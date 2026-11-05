@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=vectorcraft-appimage
 _pkgname=vectorcraft
-pkgver="0.21.0"
+pkgver="0.21.1"
 pkgrel=1
 pkgdesc="A fast, open-source, clean-room take on the Adobe Illustrator workflow."
 arch=('x86_64')
@@ -20,7 +20,7 @@ _appimage_filename="${_pkgname}-${pkgver}-linux-x86_64.AppImage"
 
 # The source URL to download AppImage
 _source_url="https://github.com/storytold/${_pkgname}/releases/download/v${pkgver}/${_pkgname}-${pkgver}-linux-x86_64.AppImage"
-#            https://github.com/storytold/vectorcraft/releases/download/v0.7.0/vectorcraft-0.7.0-linux-x86_64.AppImage
+#            https://github.com/storytold/vectorcraft/releases/download/v0.21.1/vectorcraft-0.21.1-linux-x86_64.AppImage
 
 # Where the file will live in your system (Standard is /opt/appimages/)
 _install_dir="/opt/appimages"
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    '94444a0970f495e2251435e60fe3dbead77f7b136bf334547426a920cf2e9858'
+    '7865429846119772dbd5dd9395cba88c7190cff5b92b17b141103ae7285c99e0'
     '47a442a33bf36c57e1026ce573ef14e6f15ad9c2e2fa3ffe780c3cc5a7ea57fb'
 )
 
