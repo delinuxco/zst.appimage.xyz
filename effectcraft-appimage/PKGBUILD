@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=effectcraft-appimage
 _pkgname=effectcraft
-pkgver="0.21.1"
+pkgver="0.22.0"
 pkgrel=1
 pkgdesc="Motion graphics and visual effects; an open-source, clean-room reimplementation of Adobe After Effects"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    '5bd55d407609ba0b2df483e3a95505422398d2b874315da506beb1f4d5958f3c'
+    'c3bd7078b2101ef7639bfce24d3217059ae5e63f81c24c4216c3c4be812a6752'
     'c42dc99d9ca9dfea7d5e20460f699584d2249b105338191a9538d7ac4e80d834'
 )
 
