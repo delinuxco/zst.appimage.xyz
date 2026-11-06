@@ -1,0 +1,20 @@
+pkgbase = texturecraft-appimage
+	pkgdesc = 3D texture painting; an open-source, modern texture painting application, built in pure Rust
+	pkgver = 0.4.0
+	pkgrel = 1
+	url = https://getartcraft.com/
+	arch = x86_64
+	license = apache-2.0
+	license = MIT
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = texturecraft
+	conflicts = texturecraft-bin
+	options = !strip
+	source = https://github.com/storytold/texturecraft/releases/download/v0.4.0/texturecraft-0.4.0-linux-x86_64.AppImage
+	source = ai.storyteller.texturecraft.svg
+	sha256sums = 0acaf5c545b070c03ed37c9d688711d56680ccd8b12b5fccc454f6bfd656e893
+	sha256sums = 76f7c229670be554eaa0e4d0746d329d5c3671fb13ebcfd4bc85469bc118255d
+
+pkgname = texturecraft-appimage

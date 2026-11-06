@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=texturecraft-appimage
 _pkgname=texturecraft
-pkgver="0.3.2"
+pkgver="0.4.0"
 pkgrel=1
 pkgdesc="3D texture painting; an open-source, modern texture painting application, built in pure Rust"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    '80d769b2fa60ad753488b0c37c520ce431f54d42f753b24071a093d31921e5b9'
+    '0acaf5c545b070c03ed37c9d688711d56680ccd8b12b5fccc454f6bfd656e893'
     '76f7c229670be554eaa0e4d0746d329d5c3671fb13ebcfd4bc85469bc118255d'
 )
 
