@@ -1,0 +1,20 @@
+pkgbase = photocraft-appimage
+	pkgdesc = Image editing; an open-source, clean-room reimplementation of Adobe Photoshop, rebuilt in pure Rust
+	pkgver = 0.21.0
+	pkgrel = 1
+	url = https://getartcraft.com/
+	arch = x86_64
+	license = apache-2.0
+	license = MIT
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = photocraft
+	conflicts = photocraft-bin
+	options = !strip
+	source = https://github.com/storytold/photocraft/releases/download/v0.21.0/photocraft-0.21.0-linux-x86_64.AppImage
+	source = ai.storyteller.photocraft.svg
+	sha256sums = 7726533adaa5896413d2ce0be858d522256450bfef244fbc5433bed4f99fa60b
+	sha256sums = 4a433d796f45167f128241f025c1bb0f90fc096324651f6c765a7233a567fff4
+
+pkgname = photocraft-appimage
