@@ -1,0 +1,20 @@
+pkgbase = vectorcraft-appimage
+	pkgdesc = A fast, open-source, clean-room take on the Adobe Illustrator workflow.
+	pkgver = 0.22.0
+	pkgrel = 1
+	url = https://getartcraft.com/
+	arch = x86_64
+	license = apache-2.0
+	license = MIT
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = vectorcraft
+	conflicts = vectorcraft-bin
+	options = !strip
+	source = https://github.com/storytold/vectorcraft/releases/download/v0.22.0/vectorcraft-0.22.0-linux-x86_64.AppImage
+	source = ai.storyteller.vectorcraft.svg
+	sha256sums = 09a68d22232530219c12643bb7e9eda6b1f6778cbf9f2f2fc46ff96e2259f7b0
+	sha256sums = 47a442a33bf36c57e1026ce573ef14e6f15ad9c2e2fa3ffe780c3cc5a7ea57fb
+
+pkgname = vectorcraft-appimage
