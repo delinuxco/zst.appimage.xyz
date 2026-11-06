@@ -1,0 +1,20 @@
+pkgbase = deckcraft-appimage
+	pkgdesc = Presentations and slide shows: an open-source, clean-room reimplementation of Microsoft PowerPoint
+	pkgver = 0.16.0
+	pkgrel = 1
+	url = https://getartcraft.com/
+	arch = x86_64
+	license = apache-2.0
+	license = MIT
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = deckcraft
+	conflicts = deckcraft-bin
+	options = !strip
+	source = https://github.com/storytold/deckcraft/releases/download/v0.16.0/deckcraft-0.16.0-linux-x86_64.AppImage
+	source = ai.storyteller.deckcraft.svg
+	sha256sums = 1211d8b517377eed0fc037d64daef1b75b7ee278e0620ab0d7e7beb6e86183f7
+	sha256sums = 8aa7cbdae78cfb8727361f14e92af03ff405af7960342537c27e403ef5fe7c69
+
+pkgname = deckcraft-appimage

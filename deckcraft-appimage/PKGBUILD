@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=deckcraft-appimage
 _pkgname=deckcraft
-pkgver="0.15.1"
+pkgver="0.16.0"
 pkgrel=1
 pkgdesc="Presentations and slide shows: an open-source, clean-room reimplementation of Microsoft PowerPoint"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    'f9557d153189597839a456133dcf97272baac152031871fad0aec3b6d6560785'
+    '1211d8b517377eed0fc037d64daef1b75b7ee278e0620ab0d7e7beb6e86183f7'
     '8aa7cbdae78cfb8727361f14e92af03ff405af7960342537c27e403ef5fe7c69'
 )
 
