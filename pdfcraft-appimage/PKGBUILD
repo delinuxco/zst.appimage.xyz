@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=pdfcraft-appimage
 _pkgname=pdfcraft
-pkgver="0.18.2"
+pkgver="0.19.0"
 pkgrel=1
 pkgdesc="The PDF workbench; an open-source, clean-room reimplementation of Adobe Acrobat"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    'bedb1f8173e7eb9fa1d5800b65b41ed3b5a57ad93e5661c6a921a2a450242291'
+    '7d6f5875a4d68cf1fd2be8db9f3053142c2507350c17f1841230ef26c22c0b36'
     'fc411753078882e822a8ed6ecff6505dca0550f832c08a4a4468bea1e632bdb1'
 )
 

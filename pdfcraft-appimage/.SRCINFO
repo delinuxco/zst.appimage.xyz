@@ -1,0 +1,20 @@
+pkgbase = pdfcraft-appimage
+	pkgdesc = The PDF workbench; an open-source, clean-room reimplementation of Adobe Acrobat
+	pkgver = 0.19.0
+	pkgrel = 1
+	url = https://getartcraft.com/
+	arch = x86_64
+	license = apache-2.0
+	license = MIT
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = pdfcraft
+	conflicts = pdfcraft-bin
+	options = !strip
+	source = https://github.com/storytold/pdfcraft/releases/download/v0.19.0/pdfcraft-0.19.0-linux-x86_64.AppImage
+	source = ai.storyteller.pdfcraft.svg
+	sha256sums = 7d6f5875a4d68cf1fd2be8db9f3053142c2507350c17f1841230ef26c22c0b36
+	sha256sums = fc411753078882e822a8ed6ecff6505dca0550f832c08a4a4468bea1e632bdb1
+
+pkgname = pdfcraft-appimage
