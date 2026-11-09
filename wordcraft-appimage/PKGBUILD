@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=wordcraft-appimage
 _pkgname=wordcraft
-pkgver="0.16.0"
+pkgver="0.17.0"
 pkgrel=1
 pkgdesc="An open-source, clean-room reimplementation of Microsoft Word"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    '980ac1d6918f1c1e0c240d859374f22b19e524d3af3372daef1344c5a097ae17'
+    '606b3ae330c767cfa192803dba8eb7b9d29c66cdf29d0cabde083f17f06ad16b'
     '4e43313133b8d48ca124bf2a356a7113b252e7152ef8deed8ff6caa236544c11'
 )
 

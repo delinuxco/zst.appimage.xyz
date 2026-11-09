@@ -1,6 +1,6 @@
 pkgbase = wordcraft-appimage
 	pkgdesc = An open-source, clean-room reimplementation of Microsoft Word
-	pkgver = 0.16.0
+	pkgver = 0.17.0
 	pkgrel = 1
 	url = https://getartcraft.com/
 	arch = x86_64
@@ -12,9 +12,9 @@ pkgbase = wordcraft-appimage
 	provides = wordcraft
 	conflicts = wordcraft-bin
 	options = !strip
-	source = https://github.com/storytold/wordcraft/releases/download/v0.16.0/wordcraft-0.16.0-linux-x86_64.AppImage
+	source = https://github.com/storytold/wordcraft/releases/download/v0.17.0/wordcraft-0.17.0-linux-x86_64.AppImage
 	source = ai.storyteller.wordcraft.svg
-	sha256sums = 980ac1d6918f1c1e0c240d859374f22b19e524d3af3372daef1344c5a097ae17
+	sha256sums = 3b044e86d84180a05a488b42249311a9d1ed835190c13c4af11ceaf5879cedfc
 	sha256sums = 4e43313133b8d48ca124bf2a356a7113b252e7152ef8deed8ff6caa236544c11
 
 pkgname = wordcraft-appimage
