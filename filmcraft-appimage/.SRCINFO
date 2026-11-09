@@ -1,6 +1,6 @@
 pkgbase = filmcraft-appimage
 	pkgdesc = Video editing, color and sound; an open-source, clean-room reimplementation of Adobe Premiere Pro, rebuilt in pure Rust
-	pkgver = 0.18.0
+	pkgver = 0.19.0
 	pkgrel = 1
 	url = https://getartcraft.com/
 	arch = x86_64
@@ -12,9 +12,9 @@ pkgbase = filmcraft-appimage
 	provides = filmcraft
 	conflicts = filmcraft-bin
 	options = !strip
-	source = https://github.com/storytold/filmcraft/releases/download/v0.18.0/filmcraft-0.18.0-linux-x86_64.AppImage
+	source = https://github.com/storytold/filmcraft/releases/download/v0.19.0/filmcraft-0.19.0-linux-x86_64.AppImage
 	source = ai.storyteller.filmcraft.svg
-	sha256sums = 3f2d85e31414818f9ae569254bbdb2c24dc5f9bfb3f47a65870611eeff4be47d
+	sha256sums = 2f09cff6963b55bc2160158060af8de226b0ec8fc223a198b10145a58e238fe8
 	sha256sums = e938e6f4962d479ab832293d525a2d4a356ff92e094fd613c4ffa04ae01fe22e
 
 pkgname = filmcraft-appimage
