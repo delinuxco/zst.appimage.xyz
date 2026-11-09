@@ -1,6 +1,6 @@
 pkgbase = gridcraft-appimage
 	pkgdesc = An open-source, clean-room spreadsheet (Microsoft Excel-style)
-	pkgver = 0.17.0
+	pkgver = 0.18.0
 	pkgrel = 1
 	url = https://getartcraft.com/
 	arch = x86_64
@@ -12,9 +12,9 @@ pkgbase = gridcraft-appimage
 	provides = gridcraft
 	conflicts = gridcraft-bin
 	options = !strip
-	source = https://github.com/storytold/gridcraft/releases/download/v0.17.0/gridcraft-0.17.0-linux-x86_64.AppImage
+	source = https://github.com/storytold/gridcraft/releases/download/v0.18.0/gridcraft-0.18.0-linux-x86_64.AppImage
 	source = ai.storyteller.gridcraft.svg
-	sha256sums = 0455c863535822d951a1a91fdee8dd029369e0f2f93f7ac99c4916ef70a87761
+	sha256sums = fde2f9982ac769026521cb6f710ec96b4d919b1634ad68b15b2b9bf62467020c
 	sha256sums = 2d01fc6ca9a01f0dc03d68531b65648ffba8185409f7dbd54662d3e38b56a97f
 
 pkgname = gridcraft-appimage

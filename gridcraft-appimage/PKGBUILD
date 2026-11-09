@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=gridcraft-appimage
 _pkgname=gridcraft
-pkgver="0.17.0"
+pkgver="0.18.0"
 pkgrel=1
 pkgdesc="An open-source, clean-room spreadsheet (Microsoft Excel-style)"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    '0455c863535822d951a1a91fdee8dd029369e0f2f93f7ac99c4916ef70a87761'
+    'fde2f9982ac769026521cb6f710ec96b4d919b1634ad68b15b2b9bf62467020c'
     '2d01fc6ca9a01f0dc03d68531b65648ffba8185409f7dbd54662d3e38b56a97f'
 )
 
