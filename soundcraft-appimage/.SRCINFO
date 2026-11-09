@@ -1,6 +1,6 @@
 pkgbase = soundcraft-appimage
 	pkgdesc = Recording, editing and mixing audio; an open-source, clean-room reimplementation of Avid Pro Tools
-	pkgver = 0.18.0
+	pkgver = 0.19.0
 	pkgrel = 1
 	url = https://getartcraft.com/
 	arch = x86_64
@@ -12,9 +12,9 @@ pkgbase = soundcraft-appimage
 	provides = soundcraft
 	conflicts = soundcraft-bin
 	options = !strip
-	source = https://github.com/storytold/soundcraft/releases/download/v0.18.0/soundcraft-0.18.0-linux-x86_64.AppImage
+	source = https://github.com/storytold/soundcraft/releases/download/v0.19.0/soundcraft-0.19.0-linux-x86_64.AppImage
 	source = ai.storyteller.soundcraft.svg
-	sha256sums = c83de262c53d78adb36f439e06619e0dcac0ebdeb0ed168843fcb141e93b01ba
+	sha256sums = aaded74e4f132c033acc1223c776a74e59a751dc908841b4c31572e38939198f
 	sha256sums = 23ebdd40d2138db280b890985cbcd9748e3fee0a86c37ea34be96008e9eedc4d
 
 pkgname = soundcraft-appimage
