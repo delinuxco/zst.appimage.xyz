@@ -1,6 +1,6 @@
 pkgbase = effectcraft-appimage
 	pkgdesc = Motion graphics and visual effects; an open-source, clean-room reimplementation of Adobe After Effects
-	pkgver = 0.22.0
+	pkgver = 0.23.0
 	pkgrel = 1
 	url = https://getartcraft.com/
 	arch = x86_64
@@ -12,9 +12,9 @@ pkgbase = effectcraft-appimage
 	provides = effectcraft
 	conflicts = effectcraft-bin
 	options = !strip
-	source = https://github.com/storytold/effectcraft/releases/download/v0.22.0/effectcraft-0.22.0-linux-x86_64.AppImage
+	source = https://github.com/storytold/effectcraft/releases/download/v0.23.0/effectcraft-0.23.0-linux-x86_64.AppImage
 	source = ai.storyteller.effectcraft.svg
-	sha256sums = c3bd7078b2101ef7639bfce24d3217059ae5e63f81c24c4216c3c4be812a6752
+	sha256sums = 8168f27327f2edb051e268475c37631479aa08893f1e88b0add717d5f82a158f
 	sha256sums = c42dc99d9ca9dfea7d5e20460f699584d2249b105338191a9538d7ac4e80d834
 
 pkgname = effectcraft-appimage
