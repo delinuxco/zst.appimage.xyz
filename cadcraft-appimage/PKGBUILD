@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=cadcraft-appimage
 _pkgname=cadcraft
-pkgver="0.18.0"
+pkgver="0.19.0"
 pkgrel=1
 pkgdesc="A computer-aided design and drafting — an open-source, clean-room AutoCAD"
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    'cec4ccfe5b11c9ada64488e6f2a673de72d30e354cab19e6b13bfce402601827'
+    '019d0a4aba1550faf91624e8d3af3adf8e27fee1997579b54f985f693395baf9'
     '9617f0cf9c73d9ef65a1507aeba3f30ab2bc455f8a16f715a52d4a95f12669ce'
 )
 
