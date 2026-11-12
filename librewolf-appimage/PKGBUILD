@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=librewolf-appimage
 _pkgname=librewolf
-pkgver="159.0"
+pkgver="160.0"
 pkgrel=1
 pkgdesc="A custom version of Firefox, focused on privacy, security and freedom."
 arch=('x86_64')
@@ -56,7 +56,7 @@ source=(
     "${_desktop_file}"
 )
 sha256sums=(
-    'e5dc5cc56517c2abbc95acc25d89ff79ab7325f2a922697be2d3ff15f50ae2b7'
+    '656054abcc32f39b6d720cc76ea4359dbceff465ca039b2d963050ce0d1f9005'
     'd6789d90b6eac010942bb231e286e08e3a2c438de01aac8b87f02d6a124fd00b'
     '9798c311e50630c28ec642a99d6bdc13aff4d739e4386c355fd0fc98e8bb3a1e'
 )

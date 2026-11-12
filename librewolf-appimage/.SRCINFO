@@ -1,0 +1,22 @@
+pkgbase = librewolf-appimage
+	pkgdesc = A custom version of Firefox, focused on privacy, security and freedom.
+	pkgver = 160.0
+	pkgrel = 1
+	url = https://librewolf.net//
+	arch = x86_64
+	license = MPL-2.0
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	depends = firejail
+	provides = librewolf
+	conflicts = librewolf-bin
+	options = !strip
+	source = https://dl.librewolf.net/librewolf/160.0-1/librewolf-160.0-1-linux-x86_64-appimage.AppImage
+	source = librewolf.svg
+	source = net.librewolf.LibreWolf.desktop
+	sha256sums = 656054abcc32f39b6d720cc76ea4359dbceff465ca039b2d963050ce0d1f9005
+	sha256sums = d6789d90b6eac010942bb231e286e08e3a2c438de01aac8b87f02d6a124fd00b
+	sha256sums = 9798c311e50630c28ec642a99d6bdc13aff4d739e4386c355fd0fc98e8bb3a1e
+
+pkgname = librewolf-appimage
