@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=solidcraft-appimage
 _pkgname=solidcraft
-pkgver="0.30.1"
+pkgver="0.40.1"
 pkgrel=1
 pkgdesc="Open-source parametric CAD, built in Rust."
 arch=('x86_64')
@@ -55,7 +55,7 @@ source=(
 )
 
 sha256sums=(
-    '1ce0d61afd38200f0c1627931a0485f03b83e0a88b1c74c75e1a1501e938835d'
+    '7f3178c77f534b28b4a263810a940ad8bf088d9b7d993d766537903a49511c2d'
     '73c93b0149cdbb59df4563744b56f9d51242c8b75f3b3144d70726c48dfc895b'
 )
 
