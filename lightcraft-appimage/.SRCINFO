@@ -1,6 +1,6 @@
 pkgbase = lightcraft-appimage
 	pkgdesc = Photo library and raw development; an open-source, clean-room reimplementation of Adobe Lightroom, rebuilt in pure Rust
-	pkgver = 0.20.0
+	pkgver = 0.21.0
 	pkgrel = 1
 	url = https://getartcraft.com/
 	arch = x86_64
@@ -12,9 +12,9 @@ pkgbase = lightcraft-appimage
 	provides = lightcraft
 	conflicts = lightcraft-bin
 	options = !strip
-	source = https://github.com/storytold/lightcraft/releases/download/v0.20.0/lightcraft-0.20.0-linux-x86_64.AppImage
+	source = https://github.com/storytold/lightcraft/releases/download/v0.21.0/lightcraft-0.21.0-linux-x86_64.AppImage
 	source = ai.storyteller.lightcraft.svg
-	sha256sums = 66be1e9185d56f60086e9a7c019064dd238d95531c13c0e1c83a527fceb73e10
+	sha256sums = c3dea6f5c75b55d8023937c0965b5b7612533131da7d56e550a4ef0688faf1d6
 	sha256sums = a36640036befee2483a8cef056472502b44e4de430364104dedc8ee17660e7a6
 
 pkgname = lightcraft-appimage
