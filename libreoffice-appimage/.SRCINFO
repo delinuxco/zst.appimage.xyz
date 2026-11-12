@@ -1,0 +1,15 @@
+pkgbase = libreoffice-fresh-full-appimage
+	pkgdesc = LibreOffice is a free and powerful office suite, and a successor to OpenOffice.org (commonly known as OpenOffice).
+	pkgver = 26.8.2.2
+	pkgrel = 1
+	url = https://www.libreoffice.org
+	arch = x86_64
+	license = GPL
+	provides = libreoffice-fresh
+	conflicts = libreoffice
+	conflicts = libreoffice-still
+	options = !strip
+	source_x86_64 = https://appimages.libreitalia.org/portable/LibreOffice-26.8.2.2.full.help-x86_64.AppImage
+	md5sums_x86_64 = be6da2d38b66c9345e12f25486df33f0
+
+pkgname = libreoffice-fresh-full-appimage

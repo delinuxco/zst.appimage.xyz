@@ -1,0 +1,20 @@
+pkgbase = cadcraft-appimage
+	pkgdesc = A computer-aided design and drafting — an open-source, clean-room AutoCAD
+	pkgver = 0.20.1
+	pkgrel = 1
+	url = https://getartcraft.com/
+	arch = x86_64
+	license = apache-2.0
+	license = MIT
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = cadcraft
+	conflicts = cadcraft-bin
+	options = !strip
+	source = https://github.com/storytold/cadcraft/releases/download/v0.20.1/cadcraft-0.20.1-linux-x86_64.AppImage
+	source = ai.storyteller.cadcraft.svg
+	sha256sums = e7a5d244500fe45ccabfa85c632c25ecda1fb03799c318d9ad541f65b150e78f
+	sha256sums = 9617f0cf9c73d9ef65a1507aeba3f30ab2bc455f8a16f715a52d4a95f12669ce
+
+pkgname = cadcraft-appimage

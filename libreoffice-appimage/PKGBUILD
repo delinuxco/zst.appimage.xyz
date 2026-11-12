@@ -2,7 +2,7 @@
 
 pkgname=libreoffice-fresh-full-appimage
 _pkgname=LibreOffice
-pkgver="26.8.1.1"
+pkgver="26.8.2.2"
 _pkgver="26.8"
 pkgsubv=libreoffice26.8
 pkgrel=1
@@ -14,7 +14,7 @@ provides=('libreoffice-fresh')
 conflicts=(libreoffice libreoffice-still)
 source_x86_64=("https://appimages.libreitalia.org/portable/LibreOffice-${pkgver}.full.help-${arch}.AppImage")
 #               https://appimages.libreitalia.org/portable/LibreOffice-26.2.5.1.full-x86_64.AppImage
-md5sums_x86_64=('01a58027caf7b917e227085bedce701c')
+md5sums_x86_64=('be6da2d38b66c9345e12f25486df33f0')
 options=(!strip)
 _filename=LibreOffice-${pkgver}.full.help-${arch}.AppImage
 
