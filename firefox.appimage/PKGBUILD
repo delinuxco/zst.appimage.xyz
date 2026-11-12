@@ -6,8 +6,8 @@
 ###############################################################################
 pkgname=firefox-appimage
 _pkgname=firefox
-pkgver=159.0
-_pkgver=159.0.r20261022150525
+pkgver=160.0
+_pkgver=160.0.r20261104181552
 pkgrel=1
 pkgdesc="The web was meant to expand your world, not limit it. Firefox helps you shape a more personal internet that puts you back in control."
 arch=('x86_64')
@@ -21,6 +21,7 @@ _appimage_filename="${_pkgname}"-${_pkgver}"-x86_64.AppImage"
 
 # The source URL to download AppImage
 _source_url="https://github.com/srevinsaju/Firefox-Appimage/releases/download/firefox-v${_pkgver}/firefox-${_pkgver}-${arch}.AppImage"
+#           https://github.com/srevinsaju/Firefox-Appimage/releases/download/firefox-nightly/firefox-nightly-162.0.r20261112095210-x86_64.AppImage
 
 # Where the file will live in your system (Standard is /opt/appimages/)
 _install_dir="/opt/appimages"
@@ -54,7 +55,7 @@ source=("${_source_url}"
         "${_desktop_file}"
         "${_icon_file}"
 )
-sha256sums=('d2913da98a1d4457348fb0e642057273502a2fae332935776ba78972da355b68'
+sha256sums=('c2b5e9e308da6c432bd89bece53eb509ce31cadeb1303ebf74eaf222b408052f'
             '856dc311600dc42d0b3bc79b44b66e14c09a6f4e32633518793e4260d5989780'
             '533da4bb94ec467d985450d3de1f29c86cb52b51755f64b22477192b505288d5')
 
