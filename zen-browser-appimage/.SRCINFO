@@ -1,6 +1,6 @@
 pkgbase = zen-browser-appimage
 	pkgdesc = Experience tranquility while browsing the web without people tracking you!.
-	pkgver = 1.24.3
+	pkgver = 1.24.4
 	pkgrel = 1
 	url = https://zen-browser.app/
 	arch = x86_64
@@ -13,10 +13,10 @@ pkgbase = zen-browser-appimage
 	conflicts = zen
 	conflicts = zen-appimage
 	options = !strip
-	source = https://github.com/zen-browser/desktop/releases/download/1.24.1b/zen-x86_64.AppImage
+	source = https://github.com/zen-browser/desktop/releases/download/1.24.2b/zen-x86_64.AppImage
 	source = zen-browser.svg
 	source = zen-browser.desktop
-	sha256sums = d026a0dd4891731defc03fd68ee6b01cc4ffe314d253b62cc71c44a3240a6c74
+	sha256sums = 2e73140a2adf6b0bb5669396339d2c0e7a119408a392a5a807d87810f1a99bf5
 	sha256sums = aba65db8d8a2c70697b16ed0cdd7b3c5a27e6fc781b3413fb07bc55c4813c3f2
 	sha256sums = da2b173b0e3e00e6e135ec3269589d48fa9be74ec1b0799ecb34a2f6a3d6f891
 

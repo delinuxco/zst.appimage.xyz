@@ -6,8 +6,8 @@
 ###############################################################################
 pkgname=zen-browser-appimage
 _pkgname=zen-browser
-pkgver=1.24.3
-_pkgver=1.24.1b
+pkgver=1.24.4
+_pkgver=1.24.2b
 pkgrel=1
 pkgdesc="Experience tranquility while browsing the web without people tracking you!."
 arch=('x86_64')
@@ -55,7 +55,7 @@ source=(
 )
 
 sha256sums=(
-    '00ba7621ba7717d925077d8720dde79023e59950872dfb9a030209deac71c7d0'
+    '2e73140a2adf6b0bb5669396339d2c0e7a119408a392a5a807d87810f1a99bf5'
     'aba65db8d8a2c70697b16ed0cdd7b3c5a27e6fc781b3413fb07bc55c4813c3f2'
     'da2b173b0e3e00e6e135ec3269589d48fa9be74ec1b0799ecb34a2f6a3d6f891'
 )
