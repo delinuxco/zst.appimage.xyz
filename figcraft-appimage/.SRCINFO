@@ -1,6 +1,6 @@
 pkgbase = figcraft-appimage
 	pkgdesc = Interface design and prototyping: open source, collaborative and built in pure Rust
-	pkgver = 0.17.0
+	pkgver = 0.18.1
 	pkgrel = 1
 	url = https://getartcraft.com/
 	arch = x86_64
@@ -12,9 +12,9 @@ pkgbase = figcraft-appimage
 	provides = figcraft
 	conflicts = figcraft-bin
 	options = !strip
-	source = https://github.com/storytold/figcraft/releases/download/v0.17.0/figcraft-0.17.0-linux-x86_64.AppImage
+	source = https://github.com/storytold/figcraft/releases/download/v0.18.1/figcraft-0.18.1-linux-x86_64.AppImage
 	source = ai.storyteller.figcraft.svg
-	sha256sums = a749d9f8074cbd2dc7d04a16d47262001a2528391fa153bd6c5c4e4f84c8e414
+	sha256sums = 9586942dd631b96b4c5522988e9e80213907b8022ffafbca624a3fc11ae7a9e9
 	sha256sums = 811d802691a7269b7d01dc401248c009cd7c2c1b2dccb984178279a5159457dc
 
 pkgname = figcraft-appimage
