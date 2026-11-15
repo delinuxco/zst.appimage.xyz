@@ -1,0 +1,19 @@
+pkgbase = moonfin-appimage
+	pkgdesc = Premium Jellyfin & Emby client for mobile, tablet, desktop, TV, and web.
+	pkgver = 3.1.0
+	pkgrel = 1
+	url = https://example.com/
+	arch = x86_64
+	license = GPL-3.0
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = moonfin
+	conflicts = moonfin-bin
+	options = !strip
+	source = https://github.com/Moonfin-Client/Moonfin-Core/releases/download/3.1.0/Moonfin_Linux_v3.1.0.AppImage
+	source = org.moonfin.linux.svg
+	sha256sums = 24134bc93b4c5d8ad692512d49930b87aa8b1224623b4a403b53296d0c5fd35a
+	sha256sums = 907e78cebcd2183abc3f84c53045cdba3da787024fb47828097187f9a0577d64
+
+pkgname = moonfin-appimage
