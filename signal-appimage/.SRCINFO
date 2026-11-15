@@ -1,0 +1,22 @@
+pkgbase = signal-appimage
+	pkgdesc = Signal is a free, open-source messaging application that focuses on strong privacy and security.
+	pkgver = 8.35.0
+	pkgrel = 1
+	url = https://signal.org/
+	arch = x86_64
+	license = AGPL-3.0
+	depends = fuse2
+	depends = fuse3
+	depends = libxcrypt-compat
+	provides = signal
+	conflicts = signal-bin
+	conflicts = your-app-name-desktop
+	options = !strip
+	source = https://updates.signal.org/desktop/signal-desktop.AppImage
+	source = signal-desktop.svg
+	source = signal-desktop.desktop
+	sha256sums = 1ed1c81f5155284ea8fe8e5a2282ccd1f9650d71c59845534d1eeef967b1088d
+	sha256sums = 6315479d8b69a4abdd7c8c6e3e127ae03ea38cc55eb087273523c8bca6d2f751
+	sha256sums = 39b03119ff111e44549f3e6ba3b3be729f1fadd3e95bb8162c45e08bc28def1f
+
+pkgname = signal-appimage

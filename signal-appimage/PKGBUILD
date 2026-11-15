@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname="signal-appimage"
 _pkgname="signal"
-pkgver="8.31.0"
+pkgver="8.35.0"
 pkgrel=1
 pkgdesc="Signal is a free, open-source messaging application that focuses on strong privacy and security."
 arch=('x86_64')
@@ -46,7 +46,7 @@ source=("${_source_url}"
         "${_desktop_file}"
 )
 
-sha256sums=('cde48aa594101998d65909fa3808ead30f95a818a3920808cf51734f8691f255'
+sha256sums=('1ed1c81f5155284ea8fe8e5a2282ccd1f9650d71c59845534d1eeef967b1088d'
             '6315479d8b69a4abdd7c8c6e3e127ae03ea38cc55eb087273523c8bca6d2f751'
             '39b03119ff111e44549f3e6ba3b3be729f1fadd3e95bb8162c45e08bc28def1f')
 
