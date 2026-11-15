@@ -1,0 +1,17 @@
+pkgbase = gimp-appimage
+	pkgdesc = IMP is an acronym for GNU Image Manipulation Program. It is a freely distributed program for such tasks as photo retouching, image composition and image authoring.
+	pkgver = 3.2.8
+	pkgrel = 1
+	url = https://www.gimp.org/downloads/
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = gimp
+	conflicts = gimp
+	options = !strip
+	source = https://download.gimp.org/gimp/v3.2/linux/GIMP-3.2.8-x86_64.AppImage
+	sha256sums = 8b43dc23e58a1b66ace9dd6d4d5f7e8532f3398e6109f95a1ec0b6ad036aa250
+
+pkgname = gimp-appimage

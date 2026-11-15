@@ -7,7 +7,7 @@
 pkgname=gimp-appimage
 _pkgname=gimp
 _namepkg=GIMP
-pkgver="3.2.6"
+pkgver="3.2.8"
 pkgrel=1
 pkgdesc="IMP is an acronym for GNU Image Manipulation Program. It is a freely distributed program for such tasks as photo retouching, image composition and image authoring."
 arch=('x86_64')
@@ -50,7 +50,7 @@ options=(!strip)
 
 # All source files in root directory of PKGBUILD must be listed and with corresponding sha256/md5 sums
 source=("${_source_url}")
-sha256sums=('79ea41bc9b06f78fda181849a9ca8e42d83f1124dedb756f4d52352e2465010f')
+sha256sums=('8b43dc23e58a1b66ace9dd6d4d5f7e8532f3398e6109f95a1ec0b6ad036aa250')
 
 prepare() {
 
