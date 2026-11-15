@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=blender-appimage
 _pkgname=blender
-pkgver=5.2.3
+pkgver=5.3.0
 pkgrel=1
 pkgdesc="Free and open source 3D creation suite."
 arch=('x86_64')
@@ -19,7 +19,7 @@ conflicts=('blender-bin')
 _appimage_filename="${_pkgname}-${pkgver}-${arch}.AppImage"
 
 # The source URL to download AppImage
-_source_url="https://github.com/Lethja/blender-appimage/releases/download/2026-08-26/${_pkgname}-${pkgver}-${arch}.AppImage"
+_source_url="https://github.com/Lethja/blender-appimage/releases/download/2026-11-12/${_pkgname}-${pkgver}-${arch}.AppImage"
 
 # Where the file will live in your system (Standard is /opt/appimages/)
 _install_dir="/opt/appimages"
@@ -49,7 +49,7 @@ options=(!strip)
 
 # All source files in root directory of PKGBUILD must be listed and with corresponding sha256/md5 sums
 source=("${_source_url}")
-sha256sums=('9e9ca694629865b9b387d34fb4d2e0f340dc97541021de1f7fe3a4dba638c849')
+sha256sums=('33ce9b081f6ecca06ab768ff1e2cc47a1c311cdb16126a6bb6919a3961126a22')
 
 prepare() {
   

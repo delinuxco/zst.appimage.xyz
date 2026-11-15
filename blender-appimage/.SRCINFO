@@ -1,0 +1,17 @@
+pkgbase = blender-appimage
+	pkgdesc = Free and open source 3D creation suite.
+	pkgver = 5.3.0
+	pkgrel = 1
+	url = https://www.blender.org
+	arch = x86_64
+	license = GPLv2, GPLv3, Apache 2.0, Zlib, MIT License,OSL, BSD License, Python License
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = blender
+	conflicts = blender-bin
+	options = !strip
+	source = https://github.com/Lethja/blender-appimage/releases/download/2026-11-12/blender-5.3.0-x86_64.AppImage
+	sha256sums = 33ce9b081f6ecca06ab768ff1e2cc47a1c311cdb16126a6bb6919a3961126a22
+
+pkgname = blender-appimage

@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=cin-appimage
 _pkgname=Cinelerra-GG
-pkgver=20260831
+pkgver=20261031
 pkgrel=2
 pkgdesc="Cinelerra GG Infinity is a free and open source video editing software for Linux.."
 arch=('x86_64')
@@ -53,7 +53,7 @@ source=(
         "${_source_url}"
         "${_desktop_file}"
 )
-sha256sums=('f126e9241b75b00aed81a4d43f157903385afa1528811794a7086a98c863e966'
+sha256sums=('527097b5982d5b43097ed21c005bd90b1169b0683cb67ef3e836459642d770a1'
             '44fe99134a42898eb0a5f7b609c4767273fa4142ba31488c3694901fb6bc77e7'
 )
 
