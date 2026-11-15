@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=kdenlive-appimage
 _pkgname=kdenlive
-pkgver=26.08.2
+pkgver=26.08.3
 pkgrel=1
 pkgdesc="Kdenlive is a video editing application with support for many audio and video formats."
 arch=('x86_64')
@@ -52,7 +52,7 @@ options=(!strip)
 
 # All source files in root directory of PKGBUILD must be listed and with corresponding sha256/md5 sums
 source=("${_source_url}")
-sha256sums=('3194c0979bcfb7ec4a0b33ebc05178a51cffdf5b180c3a89bcf4da94e025bc78')
+sha256sums=('2c8322edfc86605e4c98a78a019310d9b4fc46bb8e94e6fe313dc7dd987e7671')
 
 prepare() {
 
