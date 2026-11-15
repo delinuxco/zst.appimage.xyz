@@ -1,0 +1,22 @@
+pkgbase = obs-studio-appimage
+	pkgdesc = OBS Studio - Free and open source software for live streaming and screen recording.
+	pkgver = 33.0.1
+	pkgrel = 1
+	url = https://obsproject.com/
+	arch = x86_64
+	license = GPL-2.0
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = obs-studio
+	provides = obs
+	conflicts = obs
+	conflicts = obs-studio-git
+	conflicts = obs-studio-bin
+	options = !strip
+	source = https://github.com/pkgforge-dev/OBS-Studio-AppImage/releases/download/33.0.1-1%402026-11-01_1793557599/OBS_Studio-33.0.1-1-anylinux-x86_64.AppImage
+	source = com.obsproject.Studio.svg
+	sha256sums = d48393532beb1719c5da3d559cacc427fcf9c0d6f73035aebc6f57c36c562a0a
+	sha256sums = d2c58122b673dbc975fc9e7012d6159ca6ef3557125cf04256bca583dd09d6fa
+
+pkgname = obs-studio-appimage

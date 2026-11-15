@@ -6,8 +6,8 @@
 ###############################################################################
 pkgname=obs-studio-appimage
 _pkgname=obs-studio
-pkgver="32.2.2"
-pkgrel=2
+pkgver="33.0.1"
+pkgrel=1
 pkgdesc="OBS Studio - Free and open source software for live streaming and screen recording."
 arch=('x86_64')
 url="https://obsproject.com/"
@@ -19,7 +19,9 @@ conflicts=('obs' 'obs-studio-git' 'obs-studio-bin')
 _appimage_filename="OBS_Studio-${pkgver}-1-anylinux-x86_64.AppImage"
 
 # The source URL to download AppImage
-_source_url="https://github.com/pkgforge-dev/OBS-Studio-AppImage/releases/download/${pkgver}-1%402026-08-22_1787394909/OBS_Studio-${pkgver}-1-anylinux-x86_64.AppImage"
+_source_url="https://github.com/pkgforge-dev/OBS-Studio-AppImage/releases/download/${pkgver}-1%402026-11-01_1793557599/OBS_Studio-${pkgver}-1-anylinux-x86_64.AppImage"
+
+#           https://github.com/pkgforge-dev/OBS-Studio-AppImage/releases/download/33.0.1-1%402026-11-01_1793557599/OBS_Studio-33.0.1-1-anylinux-x86_64.AppImage
 
 # Where the file will live in your system (Standard is /opt/appimages/)
 _install_dir="/opt/appimages"
@@ -54,7 +56,7 @@ source=(
 )
 
 sha256sums=(
-    '432765fd8d4128267d535fd821d179315710c99606d97f64469bbf4fabec9417'
+    'd48393532beb1719c5da3d559cacc427fcf9c0d6f73035aebc6f57c36c562a0a'
     'd2c58122b673dbc975fc9e7012d6159ca6ef3557125cf04256bca583dd09d6fa'
 )
 
