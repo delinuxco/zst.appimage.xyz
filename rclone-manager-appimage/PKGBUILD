@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname="rclone-manager-appimage"
 _pkgname="rclone-manager"
-pkgver="0.3.5"
+pkgver="0.3.6"
 pkgrel=1
 pkgdesc="Open source RGB lighting control that doesn't depend on manufacturer software."
 arch=('x86_64')
@@ -46,7 +46,7 @@ source=("${_source_url}"
         "${_desktop_file}"
 )
 
-sha256sums=('4970236197fb8e75e0c3bdea2f2bb5c146d7f6ba27f97b834e08964fd70ebbda'
+sha256sums=('bf2da1c3c8346477a218241879b0e4f5bfe86e9b2a1510466c0273cfb2d4bd9a'
             '67203b8822e439e7e3bc04fb5f3ccc2fd8d65e61015613ece50d327ee73006c9'
             '0c137783ef13ec8501176218778536bde053a34f84c3d8b3b3926e9b8205582c')
 

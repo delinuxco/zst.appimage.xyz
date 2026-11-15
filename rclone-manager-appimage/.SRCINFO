@@ -1,0 +1,20 @@
+pkgbase = rclone-manager-appimage
+	pkgdesc = Open source RGB lighting control that doesn't depend on manufacturer software.
+	pkgver = 0.3.6
+	pkgrel = 1
+	url = https://openrgb.org/
+	arch = x86_64
+	license = GPL-3.0
+	depends = fuse2
+	depends = fuse3
+	provides = rclone-manager
+	conflicts = rclone-manager-bin
+	options = !strip
+	source = https://github.com/Zarestia-Dev/rclone-manager/releases/download/v0.3.6/RClone.Manager_0.3.6_amd64.AppImage
+	source = rclone-manager.svg
+	source = rclone-manager.desktop
+	sha256sums = bf2da1c3c8346477a218241879b0e4f5bfe86e9b2a1510466c0273cfb2d4bd9a
+	sha256sums = 67203b8822e439e7e3bc04fb5f3ccc2fd8d65e61015613ece50d327ee73006c9
+	sha256sums = 0c137783ef13ec8501176218778536bde053a34f84c3d8b3b3926e9b8205582c
+
+pkgname = rclone-manager-appimage
