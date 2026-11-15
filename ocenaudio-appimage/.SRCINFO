@@ -1,0 +1,21 @@
+pkgbase = ocenaudio-appimage
+	pkgdesc = Easy, fast and powerful audio editor.
+	pkgver = 3.22.2
+	pkgrel = 1
+	url = https://ocenaudio.com/
+	arch = x86_64
+	license = Custom
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = ocenaudio
+	conflicts = ocenaudio-bin
+	options = !strip
+	source = https://www.ocenaudio.com/downloads/index.php/ocenaudio_appimage.AppImage
+	source = ocenaudio.desktop
+	source = ocenaudio.svg
+	sha256sums = 44d4172abb796a29fd1af5624b9bddb2d7222c40058a3974e470fb6b43393486
+	sha256sums = 1158d04570266c71f82085425a5fa418da21b36d7573dc2063cb59ba82ebf1d9
+	sha256sums = c3a19968178927b28950b3c1444e680cb8584a292f30958d6d6b05b504eed148
+
+pkgname = ocenaudio-appimage
