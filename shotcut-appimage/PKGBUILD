@@ -6,8 +6,8 @@
 ###############################################################################
 pkgname="shotcut-appimage"
 _pkgname="shotcut"
-pkgver="26.9.27"
-pkgrel=2
+pkgver="26.10.30"
+pkgrel=1
 pkgdesc="Shotcut is a free, open source, cross-platform video editor."
 arch=('x86_64')
 url="https://shotcut.org/"
@@ -20,7 +20,7 @@ _appimage_filename="shotcut-linux-${arch}-${pkgver}.AppImage"
 
 # The source URL
 _source_url="https://sourceforge.net/projects/shotcut/files/v${pkgver}/shotcut-linux-x86_64-${pkgver}.AppImage"
-#           https://sourceforge.net/projects/shotcut/files/v26.9.27/shotcut-linux-x86_64-26.9.27.AppImage/download
+#           https://sourceforge.net/projects/shotcut/files/v26.10.30/shotcut-linux-x86_64-26.10.30.AppImage/download
 
 # Where the file will live in your system (Standard is /opt/appimages/)
 _install_dir="/opt/appimages"
@@ -44,7 +44,7 @@ options=(!strip)
 source=("${_source_url}"
 )
 
-sha256sums=('a3da4b409d29b31294fe5097bb8c3f031d1e2cb0c14ff71717d1a7d4658e62de'
+sha256sums=('dc7f31c5fc2f21ffdc1facf844eea1314f8c2ae0d3b7d8cd680f655c5cb24274'
 )
 
 prepare() {
