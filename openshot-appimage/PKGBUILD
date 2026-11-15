@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=openshot-appimage
 _pkgname=openshot-qt
-pkgver=4.0.1
+pkgver=4.1.1
 pkgrel=1
 pkgdesc="A free, open-source video editor that’s easy to use, quick to learn, and surprisingly powerful."
 arch=('x86_64')
@@ -49,7 +49,7 @@ options=(!strip)
 
 # All source files in root directory of PKGBUILD must be listed and with corresponding sha256/md5 sums
 source=("${_source_url}")
-sha256sums=('cbeaaaf1de5afe8b3cdb55f50680e5d8f37ff0c2ea5052ddb012c01c9cca7a3f')
+sha256sums=('662d0c3cec67ddc90df6a8b0c723c0aac0d3bddf0c3c467eff562e818bb8c72f')
 
 prepare() {
 
