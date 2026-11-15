@@ -1,0 +1,24 @@
+pkgbase = ungoogled-chromium-appimage
+	pkgdesc = Chromium browser without Google.
+	pkgver = 156.0.8078.79
+	pkgrel = 1
+	url = https://github.com/ungoogled-software/ungoogled-chromium-portablelinux/
+	arch = x86_64
+	license = BSD-3-Clause
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	depends = firejail
+	provides = chromium
+	conflicts = chromium
+	conflicts = ungoogled-chromium
+	conflicts = ungoogled-chromium-bin
+	options = !strip
+	source = https://github.com/ungoogled-software/ungoogled-chromium-portablelinux/releases/download/156.0.8078.79-1/ungoogled-chromium-156.0.8078.79-1-x86_64.AppImage
+	source = ungoogled-chromium.desktop
+	source = chromium.svg
+	sha256sums = 6038b36d4bfd68da09ea60a7e5e63706082cd9add66bc8f01a8828cb5ffc46e7
+	sha256sums = d88507302108c29484c5f65b0cde8b7b35d865ef402adff8d8c8adc698731068
+	sha256sums = c4c3a33faf28225034712411b2ccdc4b32a1152348dd33e468df09dc9b83c5a1
+
+pkgname = ungoogled-chromium-appimage

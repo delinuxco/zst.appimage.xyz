@@ -6,8 +6,8 @@
 ###############################################################################
 pkgname=ungoogled-chromium-appimage
 _pkgname=ungoogled-chromium
-pkgver="156.0.8078.73"
-_pkgver="156.0.8078.73-1"
+pkgver="156.0.8078.79"
+_pkgver="156.0.8078.79-1"
 pkgrel=1
 pkgdesc="Chromium browser without Google."
 arch=('x86_64')
@@ -57,7 +57,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    'bbbe9486cebb941f7597c8b7c1d695eabbd899428094c6434af55ce1788ad77a'
+    '6038b36d4bfd68da09ea60a7e5e63706082cd9add66bc8f01a8828cb5ffc46e7'
     'd88507302108c29484c5f65b0cde8b7b35d865ef402adff8d8c8adc698731068'
     'c4c3a33faf28225034712411b2ccdc4b32a1152348dd33e468df09dc9b83c5a1'
 )
