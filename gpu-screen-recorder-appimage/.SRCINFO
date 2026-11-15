@@ -1,0 +1,24 @@
+pkgbase = gpu-screen-recorder-appimage
+	pkgdesc = A shadowplay-like screen recorder for Linux. The fastest screen recorder for Linux.
+	pkgver = 6.1.6
+	pkgrel = 1
+	url = https://git.dec05eba.com/gpu-screen-recorder/about/
+	arch = x86_64
+	license = GPL-3.0
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	depends = libxcrypt-compat
+	optdepends = libappindicator-gtk3: tray icon
+	optdepends = libayatana-appindicator: tray icon
+	provides = your-app-name
+	conflicts = your-app-name
+	options = !strip
+	source = https://github.com/pkgforge-dev/gpu-screen-recorder-AppImage/releases/download/6.1.6%402026-11-01_1793557730/gpu-screen-recorder-6.1.6-anylinux-x86_64.AppImage
+	source = com.dec05eba.gpu_screen_recorder.desktop
+	source = com.dec05eba.gpu_screen_recorder.svg
+	sha256sums = 87d4ed70a6578d8a1dc727d27051ac166ff31ccfea8bba4312e1368631d921a8
+	sha256sums = 3a4d425c1c846c79b196e481fb507b34be5fd1f74351646753ea9961d98ae9ad
+	sha256sums = ee94ba8bdab6d91127a015c2bf95bb021b6d7290afe37a6d8f052779159e3cb4
+
+pkgname = gpu-screen-recorder-appimage
