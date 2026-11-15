@@ -1,0 +1,19 @@
+pkgbase = rustdesk-appimage
+	pkgdesc = RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration.This version will not run unattended as a service..
+	pkgver = 1.5.3
+	pkgrel = 1
+	url = https://rustdesk.com/
+	arch = x86_64
+	license = AGPL-3.0
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	depends = libxcrypt-compat
+	provides = rustdesk
+	conflicts = rustdesk
+	conflicts = rustdesk-bin
+	options = !strip
+	source = https://github.com/rustdesk/rustdesk/releases/download/1.5.3/rustdesk-1.5.3-x86_64.AppImage
+	sha256sums = ff7fff208fed218fc9f895457a36cc2dd31fefbfae0461a27b54f3d391204506
+
+pkgname = rustdesk-appimage
