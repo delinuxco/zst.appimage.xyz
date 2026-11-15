@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=nextcloud-desktop-appimage
 _pkgname=nextcloud-desktop
-pkgver=35.0.1
+pkgver=35.0.3
 pkgrel=1
 pkgdesc="Use the desktop clients to keep your files synchronized between your Nextcloud server and your desktop."
 arch=('x86_64')
@@ -58,7 +58,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    '62548ab3984b62be66b6f4cc56691819b1a4bc578bf74e4d53ada8a0152b57e6'
+    '334e83b145c991ae80ec9db9483334066d2562335e2191362824ccd10aa16e54'
     '42185e40c125989c320a8f3e1ab537056b1f633237f4daab75eb06e0215783cd'
 )
 

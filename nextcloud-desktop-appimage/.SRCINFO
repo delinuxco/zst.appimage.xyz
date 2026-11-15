@@ -1,0 +1,23 @@
+pkgbase = nextcloud-desktop-appimage
+	pkgdesc = Use the desktop clients to keep your files synchronized between your Nextcloud server and your desktop.
+	pkgver = 35.0.3
+	pkgrel = 1
+	url = https://nextcloud.com/
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	optdepends = kio
+	optdepends = nemo-python
+	optdepends = nautilus-python
+	optdepends = python-caja
+	provides = nextcloud-client-cloudproviders
+	conflicts = nextcloud-client-cloudproviders
+	options = !strip
+	source = https://github.com/nextcloud-releases/desktop/releases/download/v35.0.3/Nextcloud-35.0.3-x86_64.AppImage
+	source = Nextcloud.svg
+	sha256sums = 334e83b145c991ae80ec9db9483334066d2562335e2191362824ccd10aa16e54
+	sha256sums = 42185e40c125989c320a8f3e1ab537056b1f633237f4daab75eb06e0215783cd
+
+pkgname = nextcloud-desktop-appimage
