@@ -1,6 +1,6 @@
 pkgbase = solidcraft-appimage
 	pkgdesc = Open-source parametric CAD, built in Rust.
-	pkgver = 0.42.0
+	pkgver = 0.43.0
 	pkgrel = 1
 	url = https://solidcraft.io/
 	arch = x86_64
@@ -13,9 +13,9 @@ pkgbase = solidcraft-appimage
 	conflicts = solidcraft
 	conflicts = solidcraft-bin
 	options = !strip
-	source = https://github.com/tangency-labs/solidcraft/releases/download/v0.42.0/solidcraft-0.42.0-linux-x86_64.AppImage
+	source = https://github.com/tangency-labs/solidcraft/releases/download/v0.43.0/solidcraft-0.43.0-linux-x86_64.AppImage
 	source = ai.storyteller.solidcraft.svg
-	sha256sums = 9ed1b81882dea3b055c500a2d1cba45dfe8c8127c6aaac1477bc975284551f2d
+	sha256sums = b37d01cc885ea116c8a9d9243aa08cb21e616f3b50e1d6656e6a7be92ff49896
 	sha256sums = 73c93b0149cdbb59df4563744b56f9d51242c8b75f3b3144d70726c48dfc895b
 
 pkgname = solidcraft-appimage
