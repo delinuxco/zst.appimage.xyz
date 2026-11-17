@@ -1,7 +1,7 @@
 #  Maintainer: John Machado <john at delinuxco dot com>
 pkgname=artcraft-suite
 pkgver="1.5"
-pkgrel=1
+pkgrel=2
 pkgdesc="A simple meta-package to install ArtCraft apps"
 arch=('x86_64')
 url="https://delinux.co"
@@ -21,7 +21,7 @@ depends=(
     'designcraft-appimage'
     'figcraft-appimage'
     'texturecraft-appimage'
-    'texturecraft-appimage'
+    'mailcraft-appimage'
 )
 source=()
 makedepends=()
