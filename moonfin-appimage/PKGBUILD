@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=moonfin-appimage
 _pkgname=moonfin
-pkgver="3.1.0"
+pkgver="3.1.1"
 pkgrel=1
 pkgdesc="Premium Jellyfin & Emby client for mobile, tablet, desktop, TV, and web."
 arch=('x86_64')
@@ -54,7 +54,7 @@ source=(
     "${_icon_file}"
 )
 sha256sums=(
-    '24134bc93b4c5d8ad692512d49930b87aa8b1224623b4a403b53296d0c5fd35a'
+    '07ccabd1e0e626e8b3ce32aeab067dd9c1346855b0401e07ca732cea9334f2d7'
     '907e78cebcd2183abc3f84c53045cdba3da787024fb47828097187f9a0577d64'
 )
 
