@@ -1,0 +1,19 @@
+pkgbase = epicgameslauncher-appimage
+	pkgdesc = The official Epic Games Launcher.
+	pkgver = 0.121.0
+	pkgrel = 1
+	url = https://launcher.epicgames.com/
+	arch = x86_64
+	license = Epic
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = epicgameslauncher
+	conflicts = epicgameslauncher
+	options = !strip
+	source = https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncher-x86_64.AppImage
+	source = EpicGamesLauncher.svg
+	sha256sums = 26fae3e5dc128af88a1224298ff12378763b4df2ae39403d196670ebab66b9df
+	sha256sums = 3e424b6ea688cfb2bc0c577c58310babc920422272c2078c41ce5188369bb78b
+
+pkgname = epicgameslauncher-appimage
