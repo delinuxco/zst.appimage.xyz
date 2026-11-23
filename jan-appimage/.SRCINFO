@@ -1,0 +1,22 @@
+pkgbase = jan-appimage
+	pkgdesc = Your personal intelligence. Run any model, your way.
+	pkgver = 0.8.8
+	pkgrel = 1
+	url = https://www.jan.ai/
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = jan
+	conflicts = jan
+	conflicts = jan-bin
+	options = !strip
+	source = https://github.com/janhq/jan/releases/download/v0.8.8/Jan_0.8.8_amd64.AppImage
+	source = Jan.svg
+	source = Jan.desktop
+	sha256sums = ef98314c0230e3066235fd195ff1ffdf652b85b264bbd9ddf337f99d077c9159
+	sha256sums = 2bb52c85418ef8b6251fcca07d482465c96cca620f0aee9b174f699f019182ee
+	sha256sums = c9a93063740ae1ac8a7a0bdc1f059f6d85e9a6fcd40b5082203ff4519834bf49
+
+pkgname = jan-appimage
