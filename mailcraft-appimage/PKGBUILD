@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=mailcraft-appimage
 _pkgname=mailcraft
-pkgver="0.13.0"
+pkgver="0.15.0"
 pkgrel=1
 pkgdesc="An open-source mail, calendar, contacts and tasks program, written from scratch in Rust."
 arch=('x86_64')
@@ -55,7 +55,7 @@ source=(
 )
 
 sha256sums=(
-    '537100fa46d64b7187b6adf515249b06adb31ff7fc7278a5325681e5e6af63e8'
+    '07b85f9a10a55989c05a9391e185d698dd7e37797378fc036fff966bfd845bce'
     'a3184ed3d81bd8c79e3914ebeac08847d7459b6d45328f5f9398e943f4c4a5f4'
 )
 

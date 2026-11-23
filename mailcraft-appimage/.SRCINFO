@@ -1,6 +1,6 @@
 pkgbase = mailcraft-appimage
 	pkgdesc = An open-source mail, calendar, contacts and tasks program, written from scratch in Rust.
-	pkgver = 0.13.0
+	pkgver = 0.15.0
 	pkgrel = 1
 	url = https://ucscaregroup.co.uk/
 	arch = x86_64
@@ -13,9 +13,9 @@ pkgbase = mailcraft-appimage
 	conflicts = mailcraft
 	conflicts = mailcraft-bin
 	options = !strip
-	source = https://github.com/UCS-Care-Group/mailcraft/releases/download/v0.13.0/mailcraft-0.13.0-linux-x86_64.AppImage
+	source = https://github.com/UCS-Care-Group/mailcraft/releases/download/v0.15.0/mailcraft-0.15.0-linux-x86_64.AppImage
 	source = io.github.billsecond.mailcraft.svg
-	sha256sums = 537100fa46d64b7187b6adf515249b06adb31ff7fc7278a5325681e5e6af63e8
+	sha256sums = 07b85f9a10a55989c05a9391e185d698dd7e37797378fc036fff966bfd845bce
 	sha256sums = a3184ed3d81bd8c79e3914ebeac08847d7459b6d45328f5f9398e943f4c4a5f4
 
 pkgname = mailcraft-appimage
