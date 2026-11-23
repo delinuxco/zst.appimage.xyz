@@ -7,13 +7,13 @@
 pkgname=gpu-screen-recorder-appimage
 _pkgname=gpu-screen-recorder
 pkgver=6.1.6
-pkgrel=1
+pkgrel=2
 pkgdesc="A shadowplay-like screen recorder for Linux. The fastest screen recorder for Linux."
 arch=('x86_64')
 url="https://git.dec05eba.com/gpu-screen-recorder/about/"
 license=('GPL-3.0') # Replace with actual license
-provides=('your-app-name')
-conflicts=('your-app-name')
+provides=('gpu-screen-recorder')
+conflicts=('gpu-screen-recorder-bin')
 
 # The filename as it appears in the download URL (e.g., app-1.0.0-x86_64.AppImage)
 _appimage_filename="${_pkgname}-${pkgver}-anylinux-${arch}.AppImage"
