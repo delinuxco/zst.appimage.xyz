@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=joplin-appimage
 _pkgname=joplin
-pkgver=3.7.22
+pkgver=3.7.24
 pkgrel=1
 pkgdesc="Joplin is an open source note-taking app. Capture your thoughts and securely access them from any device."
 arch=('x86_64')
@@ -60,7 +60,7 @@ source=(
 )
 
 sha256sums=(
-    '2b0b1ee82999f00883d21d950c2fb5dff28ccc3d2f570248b3abd40e5100dfdc'
+    '64d544b8c865b53d975d1cc9438300465be860dfd9b6c7d4bb6f66a9f3777584'
     'da7c35a51c968ce05eea6cfb7ddd14af1b6ed1381324e3073a7abd96e8f99a94'
 )
 
