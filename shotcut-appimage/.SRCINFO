@@ -1,6 +1,6 @@
 pkgbase = shotcut-appimage
 	pkgdesc = Shotcut is a free, open source, cross-platform video editor.
-	pkgver = 26.10.30
+	pkgver = 26.11.15
 	pkgrel = 1
 	url = https://shotcut.org/
 	arch = x86_64
@@ -11,7 +11,7 @@ pkgbase = shotcut-appimage
 	provides = shotcut
 	conflicts = shotcut-bin
 	options = !strip
-	source = https://sourceforge.net/projects/shotcut/files/v26.10.30/shotcut-linux-x86_64-26.10.30.AppImage
-	sha256sums = dc7f31c5fc2f21ffdc1facf844eea1314f8c2ae0d3b7d8cd680f655c5cb24274
+	source = https://github.com/mltframework/shotcut/releases/download/v26.11.15/shotcut-linux-x86_64-26.11.15.AppImage
+	sha256sums = 5e2324f32eafc72de0cbd5f1882c54b058ec94efd6973e3f197b844ca4311c4a
 
 pkgname = shotcut-appimage
