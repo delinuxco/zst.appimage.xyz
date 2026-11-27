@@ -1,0 +1,21 @@
+pkgbase = lm-studio-bionic-appimage
+	pkgdesc = Experiment with LLMs on your computer. Chat interface and programmable API.
+	pkgver = 1.2.3
+	pkgrel = 1
+	url = https://lmstudio.ai/
+	arch = x86_64
+	license = MIT
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = lm-studio-bionic
+	conflicts = bionic
+	options = !strip
+	source = https://bionic-installers.lmstudio.ai/linux/x64/1.2.3-7/Bionic-1.2.3-7-x64.AppImage
+	source = bionic.svg
+	source = ai.elementlabs.bionic.desktop
+	sha256sums = 5d00aae0b47b21591cfc3a133d199c1407b13c9d5bedb8c2041fcacaa05e5d4d
+	sha256sums = 5134954b5296c4cb12b3b9df45f72b23b4c8a973ffda6e658a631b0d089e23a6
+	sha256sums = e6d99b369f9382a6d0b0e2315680fa669b612a9e0dd749fe40e44c147bba4adf
+
+pkgname = lm-studio-bionic-appimage
