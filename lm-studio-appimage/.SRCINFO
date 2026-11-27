@@ -1,0 +1,23 @@
+pkgbase = lm-studio-appimage
+	pkgdesc = Experiment with LLMs on your computer. Chat interface and programmable API.
+	pkgver = 0.4.29
+	pkgrel = 1
+	url = https://lmstudio.ai/
+	arch = x86_64
+	license = MIT
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	provides = lm-studio
+	conflicts = lm-studio
+	conflicts = lmstudio-bin
+	conflicts = lm-studio-bin
+	options = !strip
+	source = https://installers.lmstudio.ai/linux/x64/0.4.29-2/LM-Studio-0.4.29-2-x64.AppImage
+	source = lm-studio.svg
+	source = ai.elementlabs.lmstudio.desktop
+	sha512sums = 30a2558e5528127e5fac7323b81e44cccde3844c6d6044107fa55c3e66390d5f8ab2294435bb3ddf0919e23e17c87049c6ed65a359315f1909b7b085646d3f45
+	sha512sums = 46fcaef72b8d340c047b45e6c28e3a5691082317eb84c815337881ea30fe2f45aae8887df7c146e919682925d9198bb946aeea6cff8f66f9072db4ab18c46188
+	sha512sums = a36d20906d3cdfe91c360755333d923c214f594761ebe0c7e5359826a96fb99131ffd5256464565cd810142d93caae634abb119dec6de8214e8feafd6d861659
+
+pkgname = lm-studio-appimage
