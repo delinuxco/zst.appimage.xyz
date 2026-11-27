@@ -1,0 +1,23 @@
+pkgbase = firefox-appimage
+	pkgdesc = The web was meant to expand your world, not limit it. Firefox helps you shape a more personal internet that puts you back in control.
+	pkgver = 161.0
+	pkgrel = 1
+	url = https://www.firefox.com/
+	arch = x86_64
+	license = MPL-2.0
+	makedepends = desktop-file-utils
+	depends = fuse2
+	depends = fuse3
+	depends = firejail
+	provides = firefox
+	conflicts = firefox
+	conflicts = firefox-bin
+	options = !strip
+	source = https://github.com/srevinsaju/Firefox-Appimage/releases/download/firefox-v161.0.r20261118180411/firefox-161.0.r20261118180411-x86_64.AppImage
+	source = firefox.desktop
+	source = firefox.svg
+	sha256sums = b00af6803b908f2f6c95c523f5b233bc59583e5b6661bff966cd96063e6f7660
+	sha256sums = 856dc311600dc42d0b3bc79b44b66e14c09a6f4e32633518793e4260d5989780
+	sha256sums = 533da4bb94ec467d985450d3de1f29c86cb52b51755f64b22477192b505288d5
+
+pkgname = firefox-appimage
