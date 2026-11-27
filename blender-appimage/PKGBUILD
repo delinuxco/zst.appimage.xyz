@@ -7,7 +7,7 @@
 pkgname=blender-appimage
 _pkgname=blender
 pkgver=5.3.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Free and open source 3D creation suite."
 arch=('x86_64')
 url=https://www.blender.org
@@ -49,7 +49,7 @@ options=(!strip)
 
 # All source files in root directory of PKGBUILD must be listed and with corresponding sha256/md5 sums
 source=("${_source_url}")
-sha256sums=('33ce9b081f6ecca06ab768ff1e2cc47a1c311cdb16126a6bb6919a3961126a22')
+sha256sums=('c863ea78673e737de9f7ed806ca44f796ed8478808576c5015a2cdb3b6c3d09e')
 
 prepare() {
   
