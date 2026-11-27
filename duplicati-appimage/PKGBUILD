@@ -6,7 +6,7 @@
 ###############################################################################
 pkgname=duplicati-appimage
 _pkgname=duplicati
-pkgver=2.4.1.0
+pkgver=2.4.1.1
 pkgrel=1
 pkgdesc="Local and Cloud Backup."
 arch=('x86_64')
@@ -16,11 +16,11 @@ provides=('duplicati')
 conflicts=('duplicati-bin')
 
 # The filename as it appears in the download URL (e.g., app-1.0.0-x86_64.AppImage)
-_appimage_filename="${_pkgname}-${pkgver}_stable_2026-10-29-linux-x64-gui.appimage"
+_appimage_filename="${_pkgname}-${pkgver}_stable_2026-11-25-linux-x64-gui.appimage"
 
 # The source URL to download AppImage
-_source_url="https://updates.duplicati.com/stable/duplicati-${pkgver}_stable_2026-10-29-linux-x64-gui.appimage"
-#            https://updates.duplicati.com/stable/duplicati-2.4.0.1_stable_2026-10-07-linux-x64-gui.appimage
+_source_url="https://updates.duplicati.com/stable/duplicati-${pkgver}_stable_2026-11-25-linux-x64-gui.appimage"
+#            https://updates.duplicati.com/stable/duplicati-2.4.1.1_stable_2026-11-25-linux-x64-gui.appimage
 
 
 # Where the file will live in your system (Standard is /opt/appimages/)
@@ -54,7 +54,7 @@ source=("${_source_url}"
         "${_desktop_file}"
         "${_icon_file}"
 )
-sha256sums=('cb90892c1d8e055ade6aa8ee18002ba53e751abf7c08e05333c8c1f9b18a489f'
+sha256sums=('1f4fdde9ebbc898a8d6ffea2a8124e01dfad827f8d65e7ed1297ff0c64157deb'
             '0e3e656bc2ae141acc9b0e76aed5d14350cfcc895e7336cb0fd5d7d2ecef2741'
             'afb927f5999552bb71088c48914cd7e78b51a983f93de517d2ec06a6d8645d9f'
 )
