@@ -1,6 +1,6 @@
 pkgbase = designcraft-appimage
 	pkgdesc = An open-source, clean-room reimplementation of Adobe InDesign
-	pkgver = 0.20.1
+	pkgver = 0.21.1
 	pkgrel = 1
 	url = https://getartcraft.com/
 	arch = x86_64
@@ -12,9 +12,9 @@ pkgbase = designcraft-appimage
 	provides = designcraft
 	conflicts = designcraft-bin
 	options = !strip
-	source = https://github.com/storytold/designcraft/releases/download/v0.20.1/designcraft-0.20.1-linux-x86_64.AppImage
+	source = https://github.com/storytold/designcraft/releases/download/v0.21.1/designcraft-0.21.1-linux-x86_64.AppImage
 	source = ai.storyteller.designcraft.svg
-	sha256sums = f9d6fd6bb1a421850243c0d4be44235713a9ec5b26f8bf1d5ba87afcf8f91534
+	sha256sums = bb08f639ca036da0d271aca1f1f4c9bd711415c4f7e085bc1bf42d7b1f6e0c03
 	sha256sums = dc1cfa152874f8acb799ef6be3b3477f21b37c1780000acf942ad62fb99fbb4d
 
 pkgname = designcraft-appimage
